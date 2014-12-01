@@ -124,17 +124,7 @@
 }
 
 
--(void)mudarProgresso:(BOOL)resposta{
-    if (resposta) {
-        [nodeProgresso insereAcerto];
-        
-    }else{
-        [nodeProgresso insereErro];
-    }
-    
-    [vetorExercicios addObject: [[ExercicioDesafio alloc] initWithTempo:[nodeCronometro tempoAtual] acertou:resposta]];
-    
-}
+
 
 
 //ESTE METODO É CHAMADO SOMENTE QUANDO O PROGRESSBAR CHEGA AO FIM

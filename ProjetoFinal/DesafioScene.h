@@ -8,6 +8,8 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "ExercicioDesafio.h"
+#import "ProgressoDesafioBar.h"
+#import "SpriteCronometroNode.h"
 
 @protocol DesafioSceneDelegate <NSObject>
 //-(void)exibirDadosEstatisticos:(NSArray*)tempos nAcertos:(int)nAcertos nErros:(int)nErros;
@@ -19,10 +21,13 @@
 @interface DesafioScene : SKScene{
     int nExercicios;
     NSMutableArray *vetorExercicios;
+    SpriteCronometroNode *nodeCronometro;
+    ProgressoDesafioBar *nodeProgresso;
 }
 
 @property id <DesafioSceneDelegate> myDelegate;
 
 -(void)reiniciarDesafio;
+-(void)mudarProgresso:(BOOL)resposta;
 
 @end

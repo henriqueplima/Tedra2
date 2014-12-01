@@ -23,8 +23,8 @@
     SKSpriteNode *nodeMaquina;
     SpriteVisorNode *nodeVisor;
     SpriteEsteiraNode *nodeEsteira;
-    SpriteCronometroNode *nodeCronometro;
-    ProgressoDesafioBar *nodeProgresso;
+//    SpriteCronometroNode *nodeCronometro;
+//    ProgressoDesafioBar *nodeProgresso;
 }
 
 @end
