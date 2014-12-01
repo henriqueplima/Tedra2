@@ -16,6 +16,7 @@
 @property int nAcertos;
 @property NSMutableArray *vetorValores;
 @property NSMutableArray *vetorDesafios;
+@property NSArray *vetorExercicios;
 @property BEMSimpleLineGraphView *myGraph;
 
 

@@ -70,6 +70,7 @@
 		846B738E19782427009C2EB7 /* fundo-cinza.png in Resources */ = {isa = PBXBuildFile; fileRef = 846B738D19782427009C2EB7 /* fundo-cinza.png */; };
 		846B73921978255B009C2EB7 /* CenaExercicioOperadores1.m in Sources */ = {isa = PBXBuildFile; fileRef = 846B73911978255B009C2EB7 /* CenaExercicioOperadores1.m */; };
 		8487523E19C379E100A93120 /* CenaLivre.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487523D19C379E100A93120 /* CenaLivre.m */; };
+		84918C851A2CA87F0062478D /* ExercicioDesafio.m in Sources */ = {isa = PBXBuildFile; fileRef = 84918C841A2CA87F0062478D /* ExercicioDesafio.m */; };
 		8492087D19C765C200D64AE8 /* MenuNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8492087C19C765C200D64AE8 /* MenuNode.m */; };
 		8492087F19C7756400D64AE8 /* menuIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8492087E19C7756400D64AE8 /* menuIcon.png */; };
 		84960B7A19C8B40000BC7808 /* IconeSecao.m in Sources */ = {isa = PBXBuildFile; fileRef = 84960B7919C8B40000BC7808 /* IconeSecao.m */; };
@@ -420,6 +421,8 @@
 		846B73911978255B009C2EB7 /* CenaExercicioOperadores1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenaExercicioOperadores1.m; sourceTree = "<group>"; };
 		8487523C19C379E100A93120 /* CenaLivre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenaLivre.h; sourceTree = "<group>"; };
 		8487523D19C379E100A93120 /* CenaLivre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenaLivre.m; sourceTree = "<group>"; };
+		84918C831A2CA87F0062478D /* ExercicioDesafio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercicioDesafio.h; sourceTree = "<group>"; };
+		84918C841A2CA87F0062478D /* ExercicioDesafio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercicioDesafio.m; sourceTree = "<group>"; };
 		8492087B19C765C200D64AE8 /* MenuNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuNode.h; path = ../MenuNode.h; sourceTree = "<group>"; };
 		8492087C19C765C200D64AE8 /* MenuNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuNode.m; path = ../MenuNode.m; sourceTree = "<group>"; };
 		8492087E19C7756400D64AE8 /* menuIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menuIcon.png; path = Imagens/menuIcon.png; sourceTree = "<group>"; };
@@ -1079,6 +1082,8 @@
 				12719D3C19CB558A006B1374 /* Animacoes */,
 				12719D4019CB5656006B1374 /* Cenas */,
 				12719D4419CB569E006B1374 /* Engine */,
+				84918C831A2CA87F0062478D /* ExercicioDesafio.h */,
+				84918C841A2CA87F0062478D /* ExercicioDesafio.m */,
 			);
 			name = Desafio;
 			sourceTree = "<group>";
@@ -2163,6 +2168,7 @@
 				12719D4C19CB5FB5006B1374 /* BotaoDesafiosNode.m in Sources */,
 				125398C11992AB3B006D4DAC /* SpriteOperadorCondicional.m in Sources */,
 				1551BFED19C36F4B00CBDB86 /* ListaEnciclopediaViewController.m in Sources */,
+				84918C851A2CA87F0062478D /* ExercicioDesafio.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

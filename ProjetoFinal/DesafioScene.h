@@ -7,14 +7,19 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "ExercicioDesafio.h"
 
 @protocol DesafioSceneDelegate <NSObject>
--(void)exibirDadosEstatisticos:(NSArray*)tempos nAcertos:(int)nAcertos nErros:(int)nErros;
+//-(void)exibirDadosEstatisticos:(NSArray*)tempos nAcertos:(int)nAcertos nErros:(int)nErros;
+-(void)exibirDadosEstatisticos:(NSArray*)vetorExercicios;
 @end
 
 
 
-@interface DesafioScene : SKScene
+@interface DesafioScene : SKScene{
+    int nExercicios;
+    NSMutableArray *vetorExercicios;
+}
 
 @property id <DesafioSceneDelegate> myDelegate;
 

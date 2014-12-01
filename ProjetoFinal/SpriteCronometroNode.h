@@ -20,6 +20,7 @@
     float tempoDuracaoInicial ,tempoDuracaoAtual, prograssaoTempoDinamica;
     SKAction *acaoIniciarContagem;
     NSMutableArray *vtTempoDeResposta;
+    float tempoAtual;
 }
 
 @property id<SpriteCronometroDelegate> myDelegate;
@@ -36,5 +37,6 @@
 -(void)usuarioAcertouResposta;
 -(NSArray*)getVetorTempos;
 -(void)resetarDados;
+- (float)tempoAtual;
 
 @end

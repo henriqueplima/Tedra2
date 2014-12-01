@@ -34,6 +34,13 @@
     return self;
 }
 
+
+- (float)tempoAtual{
+    
+    return tempoAtual;
+    
+}
+
 -(void)inicializarClasse:(float)tempo{
     //INICIALMENTE A BARRA DE TEMPO COMEÇA BEM PEQUENA MAS EM SEGUIDA JÁ INICIA UMA ANIMAÇÃO PRA FICAR TOTALMENTE PREENCHIDA
     [self setSize:CGSizeMake(0, self.size.height)];
@@ -91,7 +98,8 @@
 
 -(void)prepararCronometro{
     [self removeAllActions];
-    [vtTempoDeResposta addObject:[self calcularTempoDeResposta]];
+    tempoAtual = [self calcularTempoDeResposta];
+    //[vtTempoDeResposta addObject:[self calcularTempoDeResposta]];
     [self runAction:[self gerarAnimacaoPrepararCronometro]];
     
 }
@@ -197,7 +205,7 @@
 
 
 //CALCULA O TEMPO QUE DEMOROU PRO USUÁRIO RESPONDER
--(NSNumber*)calcularTempoDeResposta{
+-(float)calcularTempoDeResposta{
     float tempo = (self.size.width * tempoDuracaoAtual) / widthSize;
     tempo = tempoDuracaoAtual - tempo;
     
@@ -207,7 +215,7 @@
         tempoMedio = [NSNumber numberWithFloat:tempoDuracaoAtual];
     }
     
-    return tempoMedio;
+    return tempoMedio.floatValue;
 }
 
 

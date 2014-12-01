@@ -13,6 +13,10 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         
+        
+        nExercicios = 2;
+        vetorExercicios = [NSMutableArray array];
+        
         fimDesafio = NO;
         
         nodeFundo = [[SKSpriteNode alloc] initWithTexture:[SKTexture textureWithImageNamed:@"fundo-desafio.png"]];
@@ -42,7 +46,7 @@
         [nodeCronometro setMyDelegate:self];
         [self addChild:nodeCronometro];
         
-        nodeProgresso = [[ProgressoDesafioBar alloc] initWithBolinhas:2];
+        nodeProgresso = [[ProgressoDesafioBar alloc] initWithBolinhas:nExercicios];
         [nodeProgresso setMyDelegate:self];
         CGPoint posicao;
         posicao.y = self.size.height - nodeProgresso.size.height;
@@ -127,6 +131,9 @@
     }else{
         [nodeProgresso insereErro];
     }
+    
+    [vetorExercicios addObject: [[ExercicioDesafio alloc] initWithTempo:[nodeCronometro tempoAtual] acertou:resposta]];
+    
 }
 
 
@@ -165,7 +172,10 @@
         NSLog(@"Acabou o desafio!");
         NSLog(@"Acertos: %d - Erros: %d", [nodeProgresso getNAcertos], [nodeProgresso getNErros]);
         
-        [[self myDelegate] exibirDadosEstatisticos:[nodeCronometro getVetorTempos] nAcertos:[nodeProgresso getNAcertos] nErros:[nodeProgresso getNErros]];
+        //[[self myDelegate] exibirDadosEstatisticos:[nodeCronometro getVetorTempos] nAcertos:[nodeProgresso getNAcertos] nErros:[nodeProgresso getNErros]];
+        
+        [[self myDelegate] exibirDadosEstatisticos:vetorExercicios];
+        
         return;
     }
     [nodeEsteira modificarTipoDasCaixas];

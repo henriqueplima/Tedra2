@@ -133,23 +133,36 @@
     
 }
 
+
+
 -(float)calcularTempoTotalDesafio{
     float tempoTotal = 0;
     
-    for (int i = 0; i < self.vtTempos.count; i++) {
-        tempoTotal += [[self.vtTempos objectAtIndex:i] floatValue];
+    for (ExercicioDesafio *ex in self.vetorExercicios) {
+        tempoTotal += [ex tempo];
     }
     
     return tempoTotal;
 }
 
+
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
 
+- (void)contarAcertos{
+    
+    for (ExercicioDesafio *ex in self.vetorExercicios) {
+        if ([ex acertou]) {
+            self.nAcertos++;
+        }
+    }
+    
+}
 
 - (void)iniciarGraficoPizza{
-    int totalExercicios = self.vtTempos.count;
+    int totalExercicios = (int) self.vetorExercicios.count;
+    [self contarAcertos];
     int nErros = totalExercicios - self.nAcertos;
     
     //CALCULA A PORCENTAGEM DE ACERTOS

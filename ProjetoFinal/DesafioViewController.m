@@ -87,15 +87,16 @@
 }
 
 
--(void)inicializarPageViewController:(NSArray *)tempos nAcertos:(int)nAcertos{
+-(void)inicializarPageViewController:(NSArray *)vetorExercicios{
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
     self.pageController.dataSource = self;
     [[self.pageController view] setFrame:CGRectMake(0, 100, 768, 600)];
     
     estatisticas = [self viewControllerAtIndex:0];
-    estatisticas.vtTempos = tempos;
-    estatisticas.nAcertos = nAcertos;
+//    estatisticas.vtTempos = tempos;
+//    estatisticas.nAcertos = nAcertos;
+    estatisticas.vetorExercicios = vetorExercicios;
     
     
     
@@ -110,10 +111,11 @@
 }
 
 
--(void)exibirDadosEstatisticos:(NSArray *)tempos nAcertos:(int)nAcertos nErros:(int)nErros{
+-(void)exibirDadosEstatisticos:(NSArray *)vetorExercicios{
     
     [self criarViewBackground];
-    [self inicializarPageViewController:tempos nAcertos:nAcertos];
+    //[self inicializarPageViewController:tempos nAcertos:nAcertos];
+    [self inicializarPageViewController:vetorExercicios];
 }
 
 
