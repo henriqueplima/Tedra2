@@ -69,11 +69,11 @@
 #pragma mark - SimpleLineGraph Data Source
 
 - (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph {
-    return (int)[self.vetorValores count];
+    return (int)[self.vetorExercicios count];
 }
 
-- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
-    return [[self.vetorValores objectAtIndex:index] floatValue];
+- (ExercicioDesafio *)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index {
+    return [self.vetorExercicios objectAtIndex:index];
 }
 
 
@@ -92,10 +92,10 @@
     
     
     for (int i = 0; i < 15; i++) {
-        [self.vetorValores addObject:@([self getRandomInteger])];
+        
         [self.vetorDesafios addObject:[NSString stringWithFormat:@"%@", @(2000 + i)]]; // Dates for the X-Axis of the graph
         
-        totalNumber = [[self.vetorValores objectAtIndex:i] intValue];
+        //totalNumber = [[self.vetorValores objectAtIndex:i] intValue];
     }
 }
 

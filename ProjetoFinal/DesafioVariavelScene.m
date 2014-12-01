@@ -14,7 +14,7 @@
     if (self = [super initWithSize:size]) {
         
         
-        nExercicios = 2;
+        nExercicios = 7;
         vetorExercicios = [NSMutableArray array];
         
         fimDesafio = NO;

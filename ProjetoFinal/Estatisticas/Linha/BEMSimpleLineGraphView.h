@@ -20,6 +20,7 @@
 
 #import "BEMCircle.h"
 #import "BEMLine.h"
+#import "ExercicioDesafio.h"
 
 
 @protocol BEMSimpleLineGraphDelegate;
@@ -304,7 +305,7 @@
  @param graph The graph object requesting the point value.
  @param index The index from left to right of a given point (X-axis). The first value for the index is 0.
  @return The Y-axis value at a given index. */
-- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index;
+- (ExercicioDesafio *)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index;
 
 
 @optional

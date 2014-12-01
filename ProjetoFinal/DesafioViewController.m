@@ -97,6 +97,7 @@
 //    estatisticas.vtTempos = tempos;
 //    estatisticas.nAcertos = nAcertos;
     estatisticas.vetorExercicios = vetorExercicios;
+    arrayExercicios = vetorExercicios;
     
     
     
@@ -240,8 +241,9 @@
     if (index == 1) {
         //return nil;
     }
-    
-    return [self viewControllerAtIndex:index];
+    EstatisticaViewController *view = [self viewControllerAtIndex:index];
+    view.vetorExercicios = arrayExercicios;
+    return view;
     
 }
 

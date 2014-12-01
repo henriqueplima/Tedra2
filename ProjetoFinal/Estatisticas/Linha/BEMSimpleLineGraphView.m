@@ -50,7 +50,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     /// All of the Data Points
     NSMutableArray *dataPoints;
     
-
+    ExercicioDesafio *exercicio;
     
     /// All of the X-Axis Labels
     NSMutableArray *xAxisLabels;
@@ -392,7 +392,9 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
             CGFloat dotValue = 0;
             
             if ([self.dataSource respondsToSelector:@selector(lineGraph:valueForPointAtIndex:)]) {
-                dotValue = [self.dataSource lineGraph:self valueForPointAtIndex:i];
+                exercicio = [self.dataSource lineGraph:self valueForPointAtIndex:i];
+                dotValue = [exercicio tempo];
+                //dotValue = [self.dataSource lineGraph:self valueForPointAtIndex:i];
                 
             } else if ([self.delegate respondsToSelector:@selector(valueForIndex:)]) {
                 [self printDeprecationWarningForOldMethod:@"valueForIndex:" andReplacementMethod:@"lineGraph:valueForPointAtIndex:"];
@@ -431,10 +433,9 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
                 // circleDot.Pointcolor = self.colorPoint;
                 
                 //Coloca Cor no Ponto
+                //int teste = (int)(arc4random() % 2);
                 
-                int teste = (int)(arc4random() % 2);
-                
-                if (teste == 1) {
+                if ([exercicio acertou]) {
                     circleDot.Pointcolor = [UIColor colorWithRed:145.0 / 255 green:186.0 / 255 blue:193.0 / 255 alpha:1];
                 }else{
                     circleDot.Pointcolor = [UIColor colorWithRed:157.0 / 255 green:78.0 / 255 blue:84.0 / 255 alpha:1];
@@ -1111,7 +1112,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         @autoreleasepool {
             for (int i = 0; i < numberOfPoints; i++) {
                 if ([self.dataSource respondsToSelector:@selector(lineGraph:valueForPointAtIndex:)]) {
-                    dotValue = [self.dataSource lineGraph:self valueForPointAtIndex:i];
+                    ExercicioDesafio *novoEx = [self.dataSource lineGraph:self valueForPointAtIndex:i];
+                    dotValue = [novoEx tempo];
+                    //dotValue = [self.dataSource lineGraph:self valueForPointAtIndex:i];
+                    
                     
                 } else if ([self.delegate respondsToSelector:@selector(valueForIndex:)]) {
                     [self printDeprecationWarningForOldMethod:@"valueForIndex:" andReplacementMethod:@"lineGraph:valueForPointAtIndex:"];
@@ -1147,7 +1151,9 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         @autoreleasepool {
             for (int i = 0; i < numberOfPoints; i++) {
                 if ([self.dataSource respondsToSelector:@selector(lineGraph:valueForPointAtIndex:)]) {
-                    dotValue = [self.dataSource lineGraph:self valueForPointAtIndex:i];
+                    ExercicioDesafio *novoEx = [self.dataSource lineGraph:self valueForPointAtIndex:i];
+                    dotValue = [novoEx tempo];
+                    //dotValue = [self.dataSource lineGraph:self valueForPointAtIndex:i];
                     
                 } else if ([self.delegate respondsToSelector:@selector(valueForIndex:)]) {
                     [self printDeprecationWarningForOldMethod:@"valueForIndex:" andReplacementMethod:@"lineGraph:valueForPointAtIndex:"];

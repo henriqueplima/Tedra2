@@ -19,6 +19,7 @@
     GerenciadorDesafios *gerenciadorDesafios;
     Gerador *gerador;
     SKView *viewDesafioAtual;
+    NSArray *arrayExercicios;
 }
 
 @property (strong, nonatomic) UIPageViewController *pageController;
