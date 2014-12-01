@@ -36,6 +36,8 @@
             [self exibePlacarFinal:[gerenciadorDesafios desafioFinalizado]];
         }else{
             [self montaTela];
+            [self adicionarCronometro];
+            [nodeCronometro iniciarAnimacaoDeEntrada];
             
         }
         
@@ -48,6 +50,12 @@
     }
     
     return self;
+}
+
+-(void)animacaoDeEntradaCronometroFinalizada{
+    
+    
+    
 }
 
 -(void)montaTela{

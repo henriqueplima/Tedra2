@@ -18,7 +18,7 @@
 
 
 
-@interface DesafioScene : SKScene{
+@interface DesafioScene : SKScene <SpriteCronometroDelegate>{
     int nExercicios;
     NSMutableArray *vetorExercicios;
     SpriteCronometroNode *nodeCronometro;
@@ -29,5 +29,6 @@
 
 -(void)reiniciarDesafio;
 -(void)mudarProgresso:(BOOL)resposta;
+- (void)adicionarCronometro;
 
 @end

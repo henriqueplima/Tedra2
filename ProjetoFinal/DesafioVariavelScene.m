@@ -41,10 +41,7 @@
         [nodeEsteira setMyDelegate:self];
         [self addChild:nodeEsteira];
         
-        nodeCronometro = [[SpriteCronometroNode alloc] initWithTempoTotalEmSegundos:6 progressaoDeTempo:0.5];
-        [nodeCronometro setPosition:CGPointMake(self.size.width, self.size.height - 70)];
-        [nodeCronometro setMyDelegate:self];
-        [self addChild:nodeCronometro];
+         [self adicionarCronometro];
         
         nodeProgresso = [[ProgressoDesafioBar alloc] initWithBolinhas:nExercicios];
         [nodeProgresso setMyDelegate:self];
