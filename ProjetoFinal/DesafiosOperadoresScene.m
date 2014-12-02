@@ -39,6 +39,8 @@
             [self adicionarCronometro];
             [nodeCronometro iniciarAnimacaoDeEntrada];
             
+            vetorExercicios = [NSMutableArray array];
+            
         }
         
        
@@ -54,8 +56,17 @@
 
 -(void)animacaoDeEntradaCronometroFinalizada{
     
+    [nodeCronometro iniciarContagem];
+    
+}
+
+- (void)tempoEsgotado{
+    NSLog(@"tempo esgotado");
     
     
+    
+    [self insereResposta:NO];
+
 }
 
 -(void)montaTela{
@@ -124,51 +135,73 @@
     lblResultado.text = [desafioAtual resultado];
     [self ajustaBotoes];
 }
+
 -(void)exibePlacarFinal:(BOOL)concluido{
    
     if (concluido) {
-        btnRestart = [[BotaoDesafiosNode alloc] initWithImageNamed:@"Desafio-Operadores-btn1.png"];
-        [btnRestart setName:@"restart"];
-        [btnRestart setValor:@"Restart"];
-        [btnRestart setPosition:CGPointMake(384, 250)];
-        [self addChild:btnRestart];
-        [self adicionaResultado];
+        
+        [nodeCronometro pararContagem];
+        [self.myDelegate exibirDadosEstatisticos:vetorExercicios];
+//        btnRestart = [[BotaoDesafiosNode alloc] initWithImageNamed:@"Desafio-Operadores-btn1.png"];
+//        [btnRestart setName:@"restart"];
+//        [btnRestart setValor:@"Restart"];
+//        [btnRestart setPosition:CGPointMake(384, 250)];
+//        [self addChild:btnRestart];
+//        [self adicionaResultado];
+//        int i = vetorExercicios.count;
     }else{
         [btnRestart removeFromParent];
         [lblNAcertos removeFromParent];
         [gerenciadorDesafios restartDesafio];
         [self montaTela];
     }
+    
+    
 }
 
 -(void)corrige:(NSString*)opcao{
+    
+    BOOL resposta = [gerenciadorDesafios corrige:opcao];
+    
+    [self insereResposta:resposta];
+        //[self nomeiaBotao];
+}
+
+- (void)animacaoTemp{
     SKAction *temp = [SKAction waitForDuration:0.8];
-    
-    if ([gerenciadorDesafios corrige:opcao]) {
-        [operador acertou];
-        [progresso insereAcerto:[desafioAtual retornaTarefaAtual]];
-        
-        
-        [operador setValor:[(BotaoDesafiosNode*)conteudoAtivo text]]; // FAZ UM CAST DO CONTEÚDO ATIVO PARA TER ACESSO À PROPRIEDADE "TEXT"
-        
-    }else{
-        [operador errou];
-        [progresso insereErro:[desafioAtual retornaTarefaAtual]];
-        [operador setValor:[desafioAtual operador]];
-    }
-    //[self nomeiaBotao];
-    
-    
-    
-    
     
     [operador runAction:temp completion:^{
         [operador runAction:[operador acaoReversa] completion:^{
+            [nodeCronometro iniciarContagem];
             [self alteraTarefa];
         }];
         
     }];
     
+}
+
+- (void)insereResposta:(BOOL)resposta{
+    
+    if (resposta) {
+        [nodeCronometro usuarioAcertouResposta];
+        [nodeCronometro prepararCronometro];
+        [operador acertou];
+        [progresso insereAcerto:[desafioAtual retornaTarefaAtual]];
+        [operador setValor:[(BotaoDesafiosNode*)conteudoAtivo text]]; // FAZ UM CAST DO CONTEÚDO ATIVO PARA TER ACESSO À PROPRIEDADE "TEXT"
+        
+    }else{
+        [nodeCronometro usuarioErrouResposta];
+        [nodeCronometro prepararCronometro];
+        [operador errou];
+        [progresso insereErro:[desafioAtual retornaTarefaAtual]];
+        [operador setValor:[desafioAtual operador]];
+    }
+    [self animacaoTemp];
+    [vetorExercicios addObject:[[ExercicioDesafio alloc] initWithTempo:[nodeCronometro tempoAtual] acertou:resposta] ];
+    
+    
+    
+    // Inserir exercico no vetor
     
 }
 //-(void)nomeiaBotao{
@@ -217,6 +250,7 @@
 //            nomeBotaoAtivo = conteudoAtivo.name;
 //            [conteudoAtivo setName:@"??"];
             BotaoDesafiosNode *temp = (BotaoDesafiosNode*)conteudoAtivo ;
+            [nodeCronometro pararContagem];
             [self corrige:[temp text]];
             
         }else if ([@"restart"isEqualToString:conteudoAtivo.name]){

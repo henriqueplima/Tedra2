@@ -173,8 +173,14 @@
 
 //ESTE MÉTODO FAZ AS ANIMAÇÕES
 -(void)iniciarAnimacaoDeEntrada{
-    [self runAction:[self gerarAnimacaoPrepararCronometro]];
-    [[self myDelegate] animacaoDeEntradaCronometroFinalizada];
+    
+    [self runAction:[self gerarAnimacaoPrepararCronometro] completion:^{
+     
+        [[self myDelegate] animacaoDeEntradaCronometroFinalizada];
+     
+    }];
+    //[self runAction:[self gerarAnimacaoPrepararCronometro]];
+    
 }
 
 
