@@ -56,6 +56,7 @@
     [progresso reset];
     [self montaTela];
     [nodeCronometro iniciarContagem];
+    vetorExercicios = [NSMutableArray array];
     
 }
 
