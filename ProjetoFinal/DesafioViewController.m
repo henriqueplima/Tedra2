@@ -239,11 +239,11 @@
     //    }
     //
     if (index == 1) {
-        //return nil;
+        EstatisticaViewController *view = [self viewControllerAtIndex:index];
+        view.vetorExercicios = arrayExercicios;
+        return view;
     }
-    EstatisticaViewController *view = [self viewControllerAtIndex:index];
-    view.vetorExercicios = arrayExercicios;
-    return view;
+    return nil;
     
 }
 
