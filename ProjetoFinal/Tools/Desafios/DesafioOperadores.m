@@ -104,6 +104,8 @@
     desafioConcluido = NO;
     nAcertos = 0;
     nErros = 0;
+    listaTarefas = [NSMutableArray array];
+    [self instanciaTarefas];
 }
 -(int)acertos{
     return nAcertos;

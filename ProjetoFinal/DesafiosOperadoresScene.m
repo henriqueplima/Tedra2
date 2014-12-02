@@ -50,12 +50,12 @@
 
 - (void)reiniciarDesafio{
     
-    desafioAtual = [[DesafioOperadores alloc]init];
-    desafioAtual = [gerenciadorDesafios retornaTarefasParaDesafio];
+    [desafioAtual restart];
     [gerenciadorDesafios restartDesafio];
     [nodeCronometro resetarDados];
     [progresso reset];
     [self montaTela];
+    [nodeCronometro iniciarContagem];
     
 }
 
