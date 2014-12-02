@@ -188,7 +188,9 @@
     [nodeEsteira iniciarAnimacaoMoverEsteira];
     [nodeCronometro usuarioErrouResposta];
     
-    [nodeProgresso insereErro];
+    //[nodeProgresso insereErro];
+    [self mudarProgresso:NO];
+    
 }
 
 
