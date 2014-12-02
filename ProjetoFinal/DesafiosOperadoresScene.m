@@ -43,15 +43,20 @@
             
         }
         
-       
-        
-        
-        
-        
-        
     }
     
     return self;
+}
+
+- (void)reiniciarDesafio{
+    
+    desafioAtual = [[DesafioOperadores alloc]init];
+    desafioAtual = [gerenciadorDesafios retornaTarefasParaDesafio];
+    [gerenciadorDesafios restartDesafio];
+    [nodeCronometro resetarDados];
+    [progresso reset];
+    [self montaTela];
+    
 }
 
 -(void)animacaoDeEntradaCronometroFinalizada{
@@ -140,8 +145,7 @@
    
     if (concluido) {
         
-        [nodeCronometro pararContagem];
-        [self.myDelegate exibirDadosEstatisticos:vetorExercicios];
+        
 //        btnRestart = [[BotaoDesafiosNode alloc] initWithImageNamed:@"Desafio-Operadores-btn1.png"];
 //        [btnRestart setName:@"restart"];
 //        [btnRestart setValor:@"Restart"];
@@ -267,6 +271,8 @@
 
 -(void)fimDesafioAtual{
     [self removeNodesIndesejaveis];
+    [nodeCronometro pararContagem];
+    [self.myDelegate exibirDadosEstatisticos:vetorExercicios];
     
 }
 -(void)removeNodesIndesejaveis{
@@ -284,7 +290,7 @@
     //[progresso removeFromParent];
     
     
-    [self exibePlacarFinal:YES];
+    //[self exibePlacarFinal:YES];
    
 }
 
