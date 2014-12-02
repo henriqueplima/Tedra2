@@ -129,7 +129,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     tamanhoX = self.frame.size.width - 35;
     
     // Set the X Axis label font
-    _labelFont = [UIFont fontWithName:DEFAULT_FONT_NAME size:13];
+    _labelFont = [UIFont fontWithName:DEFAULT_FONT_NAME size:25];
     
     // Set Animation Values
     _animationGraphEntranceTime = 1.5;
@@ -307,10 +307,10 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         
         if (self.enablePopUpReport == YES && self.alwaysDisplayPopUpLabels == NO) {
             NSDictionary *labelAttributes = @{NSFontAttributeName: self.labelFont};
-            NSString *maxValueString = [NSString stringWithFormat:@"%li",
-                                        (long)[self calculateMaximumPointValue].integerValue];
-            NSString *minValueString = [NSString stringWithFormat:@"%li",
-                                        (long)[self calculateMinimumPointValue].integerValue];
+            NSString *maxValueString = [NSString stringWithFormat:@"%.1f",
+                                        [self calculateMaximumPointValue].floatValue];
+            NSString *minValueString = [NSString stringWithFormat:@"%.1f",
+                                        [self calculateMinimumPointValue].floatValue];
             NSString *longestString = nil;
             if ([minValueString sizeWithAttributes:labelAttributes].width >
                 [maxValueString sizeWithAttributes:labelAttributes].width)
@@ -449,7 +449,9 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
                         if ([self.delegate lineGraph:self alwaysDisplayPopUpAtIndex:i] == YES) {
                             [self displayPermanentLabelForPoint:circleDot];
                         }
-                    } else [self displayPermanentLabelForPoint:circleDot];
+                    } else{
+                        [self displayPermanentLabelForPoint:circleDot];
+                    }
                 }
                 
                 // Dot entrance animation
@@ -1063,9 +1065,9 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     self.popUpLabel.center = self.popUpView.center;
     
     if ([self.delegate respondsToSelector:@selector(popUpSuffixForlineGraph:)])
-        self.popUpLabel.text = [NSString stringWithFormat:@"%li%@", (long)[dataPoints[(NSInteger) closestDot.tag - DotFirstTag100] integerValue], [self.delegate popUpSuffixForlineGraph:self]];
+        self.popUpLabel.text = [NSString stringWithFormat:@"%.1f%@", [dataPoints[closestDot.tag - DotFirstTag100] floatValue], [self.delegate popUpSuffixForlineGraph:self]];
     else
-        self.popUpLabel.text = [NSString stringWithFormat:@"%li", (long)[dataPoints[(NSInteger) closestDot.tag - DotFirstTag100] integerValue]];
+        self.popUpLabel.text = [NSString stringWithFormat:@"%.1f",[dataPoints[ closestDot.tag - DotFirstTag100] floatValue]];
     if (self.enableYAxisLabel == YES && self.popUpView.frame.origin.x <= self.YAxisLabelXOffset) {
         self.xCenterLabel = self.popUpView.frame.size.width/2;
         self.popUpView.center = CGPointMake(self.xCenterLabel + self.YAxisLabelXOffset + 1, self.yCenterLabel);
