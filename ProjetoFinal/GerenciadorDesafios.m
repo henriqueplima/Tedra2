@@ -100,7 +100,7 @@ NSString* const FONT_MEDIUM = @"CooperHewitt-Medium";
         case 4:
         case 5:
         case 6:
-            self.cenaAtual = [[DesafiosOperadoresScene alloc] init];
+            self.cenaAtual = [[DesafiosOperadoresScene alloc] initWithSize:CGSizeMake(768, 1024)];
             break;
         default:
             break;

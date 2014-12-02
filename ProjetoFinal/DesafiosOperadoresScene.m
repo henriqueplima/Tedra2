@@ -18,9 +18,9 @@
     
 }
 
--(id)init{
+-(id)initWithSize:(CGSize)size{
     
-    if (self = [super init]) {
+    if (self = [super initWithSize:size]) {
         gerenciadorDesafios = [GerenciadorDesafios sharedGerenciador];
         gerador = [[Gerador alloc] init];
         desafioAtual = [[DesafioOperadores alloc] init];

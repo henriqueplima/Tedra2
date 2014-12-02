@@ -28,6 +28,7 @@
 
 - (void)adicionarCronometro{
     
+    NSLog(@"%f", self.size.width);
     
     nodeCronometro = [[SpriteCronometroNode alloc] initWithTempoTotalEmSegundos:6 progressaoDeTempo:0.5];
     [nodeCronometro setPosition:CGPointMake(self.size.width, self.size.height - 70)];
