@@ -43,7 +43,8 @@
     [[viewDesafioAtual scene]setSize:viewDesafioAtual.frame.size];
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 50, 100, 50)];
-    [btn setBackgroundColor:[UIColor blueColor]];
+    //[btn setBackgroundColor:[UIColor blueColor]];
+    [btn setImage:[UIImage imageNamed:@"jogo_variaveis-16.png"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(voltar:) forControlEvents:UIControlEventTouchUpInside];
     
     [[self view] addSubview:btn];
@@ -140,7 +141,7 @@
     
     //LABEL MENSAGEM AO USUÁRIO
     UILabel *txtMensagem = [[UILabel alloc] init];
-    [txtMensagem setText:@"Incrível! Incrível como você é horrível, seu bosta!"];
+    [txtMensagem setText:@"Parabéns! Você foi muito bem!"];
     [txtMensagem setFont:[UIFont fontWithName:FONT_LIGHT size:35]];
     [txtMensagem setTextColor:[UIColor whiteColor]];
     CGSize requiredSize = [txtMensagem.text sizeWithAttributes: @{NSFontAttributeName: txtMensagem.font}];

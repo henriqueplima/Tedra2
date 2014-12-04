@@ -49,6 +49,7 @@
 		1551BFE719C36C3C00CBDB86 /* DesafioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551BFE619C36C3C00CBDB86 /* DesafioViewController.m */; };
 		1551BFEA19C36C8600CBDB86 /* LivreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551BFE919C36C8600CBDB86 /* LivreViewController.m */; };
 		1551BFED19C36F4B00CBDB86 /* ListaEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551BFEC19C36F4B00CBDB86 /* ListaEnciclopediaViewController.m */; };
+		84110E5B1A30D27200DD5A27 /* jogo_variaveis-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 84110E5A1A30D27200DD5A27 /* jogo_variaveis-16.png */; };
 		8418F87C1970817000781F82 /* SpriteLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F8791970817000781F82 /* SpriteLabelNode.m */; };
 		8418F87D1970817000781F82 /* CenaExercicioVariavel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F87B1970817000781F82 /* CenaExercicioVariavel1.m */; };
 		8418F88119708B0900781F82 /* ExercicioVIewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F88019708B0900781F82 /* ExercicioVIewContoller.m */; };
@@ -391,6 +392,7 @@
 		1551BFE919C36C8600CBDB86 /* LivreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivreViewController.m; sourceTree = "<group>"; };
 		1551BFEB19C36F4B00CBDB86 /* ListaEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaEnciclopediaViewController.h; sourceTree = "<group>"; };
 		1551BFEC19C36F4B00CBDB86 /* ListaEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaEnciclopediaViewController.m; sourceTree = "<group>"; };
+		84110E5A1A30D27200DD5A27 /* jogo_variaveis-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jogo_variaveis-16.png"; path = "Imagens/Desafios/jogo_variaveis-16.png"; sourceTree = "<group>"; };
 		8418F8781970817000781F82 /* SpriteLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteLabelNode.h; sourceTree = "<group>"; };
 		8418F8791970817000781F82 /* SpriteLabelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLabelNode.m; sourceTree = "<group>"; };
 		8418F87A1970817000781F82 /* CenaExercicioVariavel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenaExercicioVariavel1.h; sourceTree = "<group>"; };
@@ -1349,6 +1351,7 @@
 		A5CBEB8919D1F6A700AC879D /* Desafios */ = {
 			isa = PBXGroup;
 			children = (
+				84110E5A1A30D27200DD5A27 /* jogo_variaveis-16.png */,
 				BD6B54D819D79C5600BC0E5F /* Variavel */,
 				A52D87A119D782DA008079AF /* botao-go.png */,
 				A52D879F19D78235008079AF /* divisoria.png */,
@@ -2018,6 +2021,7 @@
 				8431DA6219CA12C50076EBBA /* modo livre-09.png in Resources */,
 				BDC40742199B1E18006CD7AE /* sprite-introducao5.png in Resources */,
 				BD6B552919D7D26600BC0E5F /* caixa1-vazia.png in Resources */,
+				84110E5B1A30D27200DD5A27 /* jogo_variaveis-16.png in Resources */,
 				BD6B554F19D7D29400BC0E5F /* animation_correct-5.png in Resources */,
 				BD6B555B19D7D29400BC0E5F /* animation_wrong-7.png in Resources */,
 				BDC40743199B1E18006CD7AE /* sprite-introducao6.png in Resources */,
