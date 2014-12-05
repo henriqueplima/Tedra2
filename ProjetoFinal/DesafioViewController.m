@@ -42,7 +42,7 @@
     [viewDesafioAtual presentScene: cenaAtual];
     [[viewDesafioAtual scene]setSize:viewDesafioAtual.frame.size];
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 50, 100, 50)];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 7.5, 100, 50)];
     //[btn setBackgroundColor:[UIColor blueColor]];
     [btn setImage:[UIImage imageNamed:@"jogo_variaveis-16.png"] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(voltar:) forControlEvents:UIControlEventTouchUpInside];

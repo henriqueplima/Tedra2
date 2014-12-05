@@ -14,7 +14,7 @@
 #import "ProgressoDesafioBar.h"
 #import "DesafioScene.h"
 
-@interface DesafioVariavelScene : DesafioScene <SpriteEsteiraDelegate, SpriteCronometroDelegate, SpriteVisorDelegate, ProgressDesafioBarDelegate>
+@interface DesafioVariavelScene : DesafioScene <SpriteEsteiraDelegate, SpriteVisorDelegate, ProgressDesafioBarDelegate>
 {
     BOOL fimDesafio;
     

@@ -22,7 +22,6 @@
     
     SKSpriteNode *fundo;
     
-    ProgressoDesafioBar *progresso;
     DesafioOperadores *desafioAtual;
     Gerador *gerador;
     

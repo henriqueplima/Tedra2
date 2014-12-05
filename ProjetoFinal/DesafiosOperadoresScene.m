@@ -25,8 +25,8 @@
         gerador = [[Gerador alloc] init];
         desafioAtual = [[DesafioOperadores alloc] init];
         desafioAtual = [gerenciadorDesafios retornaTarefasParaDesafio];
-        progresso = [[ProgressoDesafioBar alloc] initWithBolinhas:[desafioAtual nTarefas]];
-        //progresso = [[ProgressoDesafioBar alloc] initWithBolinhas:3];
+        nodeProgresso = [[ProgressoDesafioBar alloc] initWithBolinhas:[desafioAtual nTarefas]];
+        //nodeProgresso = [[nodeProgressoDesafioBar alloc] initWithBolinhas:3];
         
         
         fundo = [[SKSpriteNode alloc] initWithImageNamed:@"Desafio-Operadores-Fundo.png"];
@@ -53,7 +53,7 @@
     [desafioAtual restart];
     [gerenciadorDesafios restartDesafio];
     [nodeCronometro resetarDados];
-    [progresso reset];
+    [nodeProgresso reset];
     [self montaTela];
     [nodeCronometro iniciarContagem];
     vetorExercicios = [NSMutableArray array];
@@ -76,11 +76,15 @@
 }
 
 -(void)montaTela{
-    //(768-progresso.size.width)/2
-    [progresso setPosition:CGPointMake((768-progresso.size.width)/2, 850)];
+    //(768-nodeProgresso.size.width)/2
+    CGPoint posicao;
+    posicao.y = self.size.height - nodeProgresso.size.height;
+    posicao.x = (self.size.width / 2) - (nodeProgresso.size.width / 2);
     
-    if (![[self children]containsObject:progresso]) {
-        [self addChild:progresso];
+    [nodeProgresso setPosition:CGPointMake(posicao.x, posicao.y)];
+    
+    if (![[self children]containsObject:nodeProgresso]) {
+        [self addChild:nodeProgresso];
     }
     
     
@@ -191,18 +195,20 @@
         [nodeCronometro usuarioAcertouResposta];
         [nodeCronometro prepararCronometro];
         [operador acertou];
-        [progresso insereAcerto:[desafioAtual retornaTarefaAtual]];
+        //[nodeProgresso insereAcerto:[desafioAtual retornaTarefaAtual]];
         [operador setValor:[(BotaoDesafiosNode*)conteudoAtivo text]]; // FAZ UM CAST DO CONTEÚDO ATIVO PARA TER ACESSO À PROPRIEDADE "TEXT"
         
     }else{
         [nodeCronometro usuarioErrouResposta];
         [nodeCronometro prepararCronometro];
         [operador errou];
-        [progresso insereErro:[desafioAtual retornaTarefaAtual]];
+        //[nodeProgresso insereErro:[desafioAtual retornaTarefaAtual]];
         [operador setValor:[desafioAtual operador]];
     }
+    
     [self animacaoTemp];
-    [vetorExercicios addObject:[[ExercicioDesafio alloc] initWithTempo:[nodeCronometro tempoAtual] acertou:resposta] ];
+    [self mudarProgresso:resposta];
+//    [vetorExercicios addObject:[[ExercicioDesafio alloc] initWithTempo:[nodeCronometro tempoAtual] acertou:resposta] ];
     
     
     
@@ -261,7 +267,7 @@
         }else if ([@"restart"isEqualToString:conteudoAtivo.name]){
             [desafioAtual restart];
             [self exibePlacarFinal:NO];
-            [progresso reset];
+            [nodeProgresso reset];
         }
 
     }
@@ -288,7 +294,7 @@
     [btn1 runAction:fadeOut completion:^{[btn1 removeFromParent];}];
     [btn2 runAction:fadeOut completion:^{[btn2 removeFromParent];}];
     [operador runAction:fadeOut completion:^{[operador removeFromParent];}];
-    //[progresso removeFromParent];
+    //[nodeProgresso removeFromParent];
     
     
     //[self exibePlacarFinal:YES];

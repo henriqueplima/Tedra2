@@ -328,7 +328,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
             [self.popUpLabel sizeToFit];
             self.popUpLabel.alpha = 0;
             
-            self.popUpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.popUpLabel.frame.size.width + 7, self.popUpLabel.frame.size.height + 2)];
+            self.popUpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.popUpLabel.frame.size.width + 9, self.popUpLabel.frame.size.height + 2)];
             self.popUpView.backgroundColor = self.colorBackgroundPopUplabel;
             self.popUpView.alpha = 0;
             self.popUpView.layer.cornerRadius = 3;

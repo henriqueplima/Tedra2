@@ -98,7 +98,7 @@
 
 -(void)prepararCronometro{
     [self removeAllActions];
-    tempoAtual = [self calcularTempoDeResposta];
+    
     //[vtTempoDeResposta addObject:[self calcularTempoDeResposta]];
     [self runAction:[self gerarAnimacaoPrepararCronometro]];
     
@@ -199,14 +199,16 @@
     
     
     [self runAction:acaoIniciarContagem completion:^{
+        tempoAtual = [self calcularTempoDeResposta];
         [[self myDelegate] tempoEsgotado];
+        
     }];
 }
 
 
 -(void)pararContagem{
     [self removeAllActions];
-    
+    tempoAtual = [self calcularTempoDeResposta];
 }
 
 

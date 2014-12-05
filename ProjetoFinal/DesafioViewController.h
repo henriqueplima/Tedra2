@@ -23,6 +23,5 @@
 }
 
 @property (strong, nonatomic) UIPageViewController *pageController;
-@property (weak, nonatomic) IBOutlet UIButton *botaoVoltar;
 @property (nonatomic,strong) JCRBlurView *blurView;
 @end
