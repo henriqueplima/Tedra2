@@ -135,10 +135,10 @@
 
 
 
--(float)calcularTempoTotalDesafio{
+-(float)calcularTempoTotalDesafio:(NSArray *)vetorExercicios{
     float tempoTotal = 0;
     
-    for (ExercicioDesafio *ex in self.vetorExercicios) {
+    for (ExercicioDesafio *ex in vetorExercicios) {
         tempoTotal += [ex tempo];
     }
     
@@ -150,23 +150,25 @@
     return YES;
 }
 
-- (void)contarAcertos{
+- (int)contarAcertos:(NSArray *)vetorExercicios{
+    int totalAcertos = 0;
     
-    for (ExercicioDesafio *ex in self.vetorExercicios) {
+    for (ExercicioDesafio *ex in vetorExercicios) {
         if ([ex acertou]) {
-            self.nAcertos++;
+            totalAcertos++;
         }
     }
     
+    return totalAcertos;
 }
 
 - (void)iniciarGraficoPizza{
     int totalExercicios = (int) self.vetorExercicios.count;
-    [self contarAcertos];
-    int nErros = totalExercicios - self.nAcertos;
+    int nAcertos = [self contarAcertos:self.vetorExercicios];
+    int nErros = totalExercicios - nAcertos;
     
     //CALCULA A PORCENTAGEM DE ACERTOS
-    float porcentagemAcertos = (self.nAcertos * 100) / totalExercicios;
+    float porcentagemAcertos = (nAcertos * 100) / totalExercicios;
     
     //CALCULA QUANTOS GRAUS REPRESENTA A PORCENTAGEM DE ACERTOS E ERROS
     float grausAcerto = (porcentagemAcertos * 360) / 100;
@@ -190,7 +192,7 @@
     self.pieView2.layer.showTitles = ShowTitlesAlways;
     
     
-    PieElement* newElem = [PieElement pieElementWithValue:self.nAcertos color:self.pieView.corPadrao];
+    PieElement* newElem = [PieElement pieElementWithValue:nAcertos color:self.pieView.corPadrao];
     newElem.tipoDado = @"Acertos";
     newElem.showTitle = YES;
     int insertIndex = arc4random() % (self.pieView.layer.values.count + 1);
@@ -203,7 +205,7 @@
     
     //USADO PARA CHAMAR A SEGUNDA VIEW APÓS CERTO DELAY
     [self performSelector:@selector(exibirViewGrafico:) withObject:newElem2 afterDelay:0.4];
-    [self.pieView exibirTempoTotal:[NSString stringWithFormat:@"%.1f", [self calcularTempoTotalDesafio]]];
+    [self.pieView exibirTempoTotal:[NSString stringWithFormat:@"%.1f", [self calcularTempoTotalDesafio:self.vetorExercicios]]];
 }
 
 -(void)exibirViewGrafico:(PieElement*)newElem2{

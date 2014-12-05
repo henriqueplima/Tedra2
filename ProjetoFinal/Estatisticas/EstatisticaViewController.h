@@ -20,5 +20,7 @@
 @property BEMSimpleLineGraphView *myGraph;
 
 
+-(float)calcularTempoTotalDesafio:(NSArray *)vetorExercicios;
+- (int)contarAcertos:(NSArray *)vetorExercicios;
 -(void)finalizarEstatisticas;
 @end

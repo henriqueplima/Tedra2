@@ -115,13 +115,13 @@
 
 -(void)exibirDadosEstatisticos:(NSArray *)vetorExercicios{
     
-    [self criarViewBackground];
+    [self criarViewBackground:vetorExercicios];
     //[self inicializarPageViewController:tempos nAcertos:nAcertos];
     [self inicializarPageViewController:vetorExercicios];
 }
 
 
--(void)criarViewBackground{
+-(void)criarViewBackground:(NSArray *)vetorExercicios{
     [self setBlurView:[JCRBlurView new]];
     [[self blurView] setFrame:self.view.frame];
     [[self blurView] setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
@@ -141,12 +141,13 @@
     
     //LABEL MENSAGEM AO USUÁRIO
     UILabel *txtMensagem = [[UILabel alloc] init];
-    [txtMensagem setText:@"Parabéns! Você foi muito bem!"];
+    [txtMensagem setNumberOfLines:2];
+    [txtMensagem setTextAlignment:NSTextAlignmentCenter];
+    [txtMensagem setText:[self gerarFraseAoUsuario:vetorExercicios]];
     [txtMensagem setFont:[UIFont fontWithName:FONT_LIGHT size:35]];
     [txtMensagem setTextColor:[UIColor whiteColor]];
-    CGSize requiredSize = [txtMensagem.text sizeWithAttributes: @{NSFontAttributeName: txtMensagem.font}];
-    posX = (self.view.frame.size.width - requiredSize.width) / 2;
-    [txtMensagem setFrame:CGRectMake(posX, 770, requiredSize.width, requiredSize.height+5)];
+    posX = (self.view.frame.size.width - 700) / 2;
+    [txtMensagem setFrame:CGRectMake(posX, 770, 700, 100)];
     [self.blurView addSubview:txtMensagem];
     
     
@@ -175,6 +176,25 @@
     [botaoMenu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [botaoMenu addTarget:self action:selector forControlEvents:UIControlEventTouchDown];
     [self.blurView addSubview:botaoMenu];
+}
+
+
+-(NSString *)gerarFraseAoUsuario:(NSArray *)vetorExercicios{
+    int totalAcertos = [estatisticas contarAcertos:vetorExercicios];
+    float tempoTotal = [estatisticas calcularTempoTotalDesafio:vetorExercicios];
+    
+    if(totalAcertos == 15 && tempoTotal <= 1){
+        return @"Excelente! Tente outros desafios agora";
+    
+    }else if(totalAcertos >= 7 && totalAcertos <= 14){
+        return @"Ótimo! Você está quase dominando este desafio";
+    
+    }else if(totalAcertos >= 3 && totalAcertos <= 6){
+        return @"Bom! Continue tentando e conseguirá responder muito mais rápido";
+        
+    }else{
+        return @"Consulte a seção \"Enciclopédia\" e estude um pouco os conceitos deste tema";
+    }
 }
 
 
