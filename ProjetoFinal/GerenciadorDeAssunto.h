@@ -16,23 +16,11 @@
 
 @interface GerenciadorDeAssunto : NSObject
 {
-    NSArray *nomesDosAssuntos;
-    Assunto* assunto;
+    NSMutableArray *titulosEDescricoesAssunto;
 }
 
-+ (GerenciadorDeAssunto *)sharedGerenciador;
-+ (id)allocWithZone:(struct _NSZone *)zone;
 
--(void)mudarTemaEstudado:(NSString*)tema;
--(NSMutableArray*)retornaTeoriaFormatada;
--(NSString*)getNomedoAssunto:(int)pos;
--(NSString*)retornaNomeAssuntoAtual;
--(void)instanciaCenaDoExercicio:(int)index;
--(void)selecionaExercicio:(int)index;
--(CenaExercicio*)retornaExercicioSelecionado;
--(void)preparaExercicios;
--(NSMutableArray*)retornaTitulosEDescricoesExercicios;
--(int)exercicioSelecionado;
--(Animacao*)retornaAnimacaoNumero:(int)index;
+-(NSMutableArray*)titulosEDescricoesAssunto;
+
 
 @end

@@ -48,10 +48,6 @@
     //[self.navigationItem setTitle:@"Desafios"];
     //[[self.navigationItem backBarButtonItem]setTitle:@""];
     
-   
-    
-    
-
 
 }
 

@@ -16,25 +16,9 @@
 
 @interface Assunto : NSObject
 
-{
-    int indiceExercicio;
-    
-}
+@property NSString *titulo, *descricao, *conteudo;
+@property NSArray *imagens, *exercicios;
 
-@property int cenaAtual;
-@property NSString *nome, *teoria;
-@property NSMutableArray *exercicios;
-@property NSMutableArray *teoriaFormatada;
-
--(void)montaTeoria:(NSString*)nomeDoArquivo; // Usado somente em chamadas internas
-
--(void)selecionaExercicio:(int)index;
-
--(CenaExercicio*)retornaExercicioSelecionado;
-
--(void)preparaExercicios;
-
--(NSMutableArray*)retornaTitulosEDescricoesExercicios;
--(int)getIndiceExercicio;
--(Animacao*)retornaAnimacaoNumero:(int)index;
+-(id)initWithTitulo:(NSString*)titulo descricao:(NSString*)descricao;
+-(void)prepararAssunto;
 @end

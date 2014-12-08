@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomizadaTableViewCell.h"
+#import "CustomLabel.h"
+#import "GerenciadorDeAssunto.h"
 
-@interface ListaEnciclopediaViewController : UIViewController
-
+@interface ListaEnciclopediaViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    GerenciadorDeAssunto *gerenciador;
+    NSMutableArray* titulosDescricoes;
+}
 @end

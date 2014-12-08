@@ -13,51 +13,22 @@
 -(id)init{
     
     
-    self = [super init];
+    self = [super initWithTitulo:@"Variável" descricao:@"assunto de variável"];
     
     if (self) {
-        [self montaTeoria:@"ConceitosVariaveis"];
-        [self setNome:@"Variável"];
-        self.cenaAtual = 0;
+
     }
     return self;
 }
 
 
--(void)preparaExercicios{
+-(void)prepararAssunto{
     
-    // Aloca os objetos de exercicios
-    self.exercicios = [[NSMutableArray alloc] init];
-    [self.exercicios addObject:[[ExeVariavel1 alloc] init]];
-    [self.exercicios addObject:[[ExeVariavel2 alloc]init]];
+    // INSTANCIA AS PROPRIEDADES QUE SERÃO USADAS PARA EXIBIR O ASSUNTO
+    
+    
 }
 
--(Animacao*)retornaAnimacaoNumero:(int)index{
-    
-    if (self.cenaAtual == index) {
-        return nil;
-    }
-    
-    
-    switch (index) {
-        case 4:
-            return [[AnimaVariavel alloc] initWithVariavelDoTipo:@"INTEIRO"];
-            
-        case 1:
-            return [[AnimaVariavel alloc] initWithVariavelDoTipo:@"REAL"];
-
-        case 5:
-            return [[AnimaVariavel alloc] initWithVariavelDoTipo:@"CARACTERE"];
-            
-        case 6:
-            return [[AnimaVariavel alloc] initWithVariavelDoTipo:@"LOGICO"];
-
-        default:
-            return nil;
-    }
-    
-    [self setCenaAtual:index];
-}
 
 
 @end

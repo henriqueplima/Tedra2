@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="tHn-97-uZ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="tHn-97-uZ9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Tutorial View Controller-->
@@ -121,7 +122,75 @@
             </objects>
             <point key="canvasLocation" x="-1550" y="-186"/>
         </scene>
-        <!--Menu View Controller - Assuntos-->
+        <!--Lista De Exercicios View Controller-->
+        <scene sceneID="mNq-1y-Bc2">
+            <objects>
+                <viewController id="BJX-3u-ZYr" customClass="ListaDeExerciciosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pXO-Zz-wOO"/>
+                        <viewControllerLayoutGuide type="bottom" id="hIh-lH-cdK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iLf-CS-sj9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jek-JQ-8ox">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="200" id="MwA-qE-7FU" customClass="CustomizadaTableViewCell">
+                                        <rect key="frame" x="0.0" y="86" width="768" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MwA-qE-7FU" id="9qt-cZ-TdZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzD-Q5-uEh">
+                                                    <rect key="frame" x="166" y="32" width="404" height="54"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descricao" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="404" translatesAutoresizingMaskIntoConstraints="NO" id="oT8-Sq-H7Q">
+                                                    <rect key="frame" x="166" y="94" width="404" height="77"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGN-8q-I01">
+                                                    <rect key="frame" x="11" y="20" width="120" height="128"/>
+                                                </imageView>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFE-qf-yiU">
+                                                    <rect key="frame" x="586" y="-1" width="182" height="183"/>
+                                                    <state key="normal" image="botao-go.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="divisoria.png" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-SY-FUa">
+                                                    <rect key="frame" x="0.0" y="180" width="768" height="20"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descricao" destination="oT8-Sq-H7Q" id="U4B-5i-5Zj"/>
+                                            <outlet property="titulo" destination="uzD-Q5-uEh" id="8e7-OB-fBT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Laj-yx-eaG" id="oND-Ox-Hu5"/>
+                                    <outlet property="delegate" destination="Laj-yx-eaG" id="U7w-bT-qRb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="z1t-c4-tI7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gX4-zq-1TR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="-2568"/>
+        </scene>
+        <!--Assuntos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="menu" id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
@@ -143,7 +212,7 @@
             </objects>
             <point key="canvasLocation" x="464" y="-1485"/>
         </scene>
-        <!--View Controller - Enciclopédia-->
+        <!--Enciclopédia-->
         <scene sceneID="237-fs-HyQ">
             <objects>
                 <viewController id="l7v-hr-0yC" sceneMemberID="viewController">
@@ -217,7 +286,7 @@
             </objects>
             <point key="canvasLocation" x="2338" y="1032"/>
         </scene>
-        <!--Lista Desafio View Controller - Desafios-->
+        <!--Desafios-->
         <scene sceneID="86r-1f-ydU">
             <objects>
                 <viewController storyboardIdentifier="listaDesafio" id="Laj-yx-eaG" customClass="ListaDesafioViewController" sceneMemberID="viewController">
@@ -292,7 +361,7 @@
             </objects>
             <point key="canvasLocation" x="464" y="1032"/>
         </scene>
-        <!--Livre View Controller - Livre-->
+        <!--Livre-->
         <scene sceneID="pvF-xX-eqf">
             <objects>
                 <viewController id="fMn-6K-qgM" customClass="LivreViewController" sceneMemberID="viewController">
@@ -337,7 +406,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="1hd-Wz-ogZ"/>
+                                    <segue destination="BJX-3u-ZYr" kind="push" id="qUj-to-6fG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGj-ui-aDF">
@@ -578,7 +647,7 @@
             </objects>
             <point key="canvasLocation" x="2550" y="-2005"/>
         </scene>
-        <!--ExercicioV Iew Contoller - controlador q tem a lista de exercicios-->
+        <!--controlador q tem a lista de exercicios-->
         <scene sceneID="dzV-zg-u19">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="tQW-Gq-m4D" customClass="ExercicioVIewContoller" sceneMemberID="viewController">

@@ -13,64 +13,21 @@
 
 @implementation Assunto
 
-
-
--(void)montaTeoria:(NSString*)nomeDoArquivo{ // Método que formata a teoria vinda de um txt. Este método recebe como parametro o nome do arquivo de origem dos dados
+-(id)initWithTitulo:(NSString*)titulo descricao:(NSString*)descricao{
+    self = [super init];
     
-    NSString* path = [[NSBundle mainBundle] pathForResource:nomeDoArquivo
-                                                     ofType:@"txt"];
-    
-    NSString* content = [NSString stringWithContentsOfFile:path
-                                                  encoding:NSUTF8StringEncoding
-                                                     error:NULL];
-    
-    
-    [self setTeoriaFormatada:[NSMutableArray arrayWithArray:[content componentsSeparatedByString:@"#"]]];
-    
-}
-
-
-
-
--(void)selecionaExercicio:(int)index{
-    indiceExercicio = index;
-}
-
--(CenaExercicio*)retornaExercicioSelecionado{
-    
-    return [[self.exercicios objectAtIndex:indiceExercicio] retornaCena];
-}
-
-
--(int)getIndiceExercicio{
-    return indiceExercicio;
-}
-
--(NSMutableArray*)retornaTitulosEDescricoesExercicios{ //retorna a descrição e os títulos dos exercícios
-    
-    
-    NSMutableArray *titulosEDescricoes = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i< self.exercicios.count;i++) {
-        
-        //Cria um Dicioario com o título e a descrição do exercício e depois adiciona no Vetor
-        
-        NSDictionary *dict = @{@"titulo": [[self.exercicios objectAtIndex:i] tituloExercicio],
-                               @"descricao":[[self.exercicios objectAtIndex:i] descricaoExercicio],
-                               @"exercicio":[self.exercicios objectAtIndex:i]
-                               };
-        [titulosEDescricoes addObject:dict];
+    if (self) {
+        self.titulo = titulo;
+        self.descricao = descricao;
     }
-    return titulosEDescricoes;
+    
+    return self;
 }
 
--(void)preparaExercicios{
-    //Sobrescrever método nas classes filho
-}
 
--(Animacao*)retornaAnimacaoNumero:(int)index{
-    //Sobrescrever método nas classes filho
-    return nil;
+
+-(void)prepararAssunto{
+    
 }
 
 @end
