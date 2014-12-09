@@ -190,28 +190,6 @@
             </objects>
             <point key="canvasLocation" x="464" y="-2568"/>
         </scene>
-        <!--Assuntos-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="menu" id="BYZ-38-t0r" customClass="MenuViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GSt-Kp-7LC"/>
-                        <viewControllerLayoutGuide type="bottom" id="fER-p7-rne"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Assuntos" id="606-HT-dcC"/>
-                    <connections>
-                        <segue destination="wLQ-Hg-AQ8" kind="push" identifier="conteudoController" id="GP0-AC-7Ja"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="464" y="-1485"/>
-        </scene>
         <!--Enciclopédia-->
         <scene sceneID="237-fs-HyQ">
             <objects>
@@ -457,143 +435,6 @@
             </objects>
             <point key="canvasLocation" x="-501" y="-186"/>
         </scene>
-        <!--Conteudo View Controller-->
-        <scene sceneID="5gT-Sf-nHQ">
-            <objects>
-                <viewController storyboardIdentifier="conteudo" id="wLQ-Hg-AQ8" customClass="ConteudoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="T6y-Rp-uwO"/>
-                        <viewControllerLayoutGuide type="bottom" id="30u-z1-R7X"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1Gu-CH-mbh">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icone-teoria.png" translatesAutoresizingMaskIntoConstraints="NO" id="OuZ-PW-FLt">
-                                <rect key="frame" x="0.0" y="672" width="55" height="55"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imagem-teoria.png" translatesAutoresizingMaskIntoConstraints="NO" id="fHs-5H-6hg">
-                                <rect key="frame" x="0.0" y="713" width="768" height="311"/>
-                            </imageView>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDB-dg-lXx">
-                                <rect key="frame" x="0.0" y="713" width="748" height="311"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="sIv-jj-fJc" kind="embed" identifier="segueConteudoTeoria" id="eLg-Xe-wVQ"/>
-                                </connections>
-                            </containerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teoria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bB-gw-Z7m">
-                                <rect key="frame" x="57" y="684" width="76" height="32"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 de .. páginas" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9D-pI-883">
-                                <rect key="frame" x="639" y="689" width="109" height="25"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="18"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tin-9L-uIK">
-                        <barButtonItem key="rightBarButtonItem" title="Exercitar" style="done" id="8fF-UR-4z5">
-                            <connections>
-                                <segue destination="cRh-hY-Bbp" kind="push" identifier="exibeListaExercicios" id="fGO-m5-VjR"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="myViewContainer" destination="MDB-dg-lXx" id="VU4-Oy-26c"/>
-                        <outlet property="numeroPaginas" destination="K9D-pI-883" id="NZ2-tF-SHq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rwh-5a-MlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1432" y="-1471"/>
-        </scene>
-        <!--Lista De Exercicios View Controller-->
-        <scene sceneID="LLt-O6-lPX">
-            <objects>
-                <viewController id="cRh-hY-Bbp" customClass="ListaDeExerciciosViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EbA-rW-LDF"/>
-                        <viewControllerLayoutGuide type="bottom" id="9XK-lN-qKY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="231-Rr-1ib">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rpC-5F-fMZ">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="745"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="mKl-y3-Zch" style="IBUITableViewCellStyleDefault" id="DBa-gd-srg">
-                                        <rect key="frame" x="0.0" y="86" width="768" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DBa-gd-srg" id="Vao-NS-E01">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mKl-y3-Zch">
-                                                    <rect key="frame" x="15" y="0.0" width="738" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="cRh-hY-Bbp" id="1ge-9F-MaD"/>
-                                    <outlet property="delegate" destination="cRh-hY-Bbp" id="l98-dW-FBM"/>
-                                </connections>
-                            </tableView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIm-nW-7e3">
-                                <rect key="frame" x="557" y="801" width="191" height="193"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="35"/>
-                                <state key="normal" backgroundImage="icone-iniciar.png">
-                                    <color key="titleColor" red="0.97722833806818177" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnExercitarAction:" destination="cRh-hY-Bbp" eventType="touchUpInside" id="aWp-Xe-W3k"/>
-                                    <segue destination="tQW-Gq-m4D" kind="push" id="fZo-ic-il3"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icone-exercicio.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uhl-yd-AAF">
-                                <rect key="frame" x="20" y="761" width="55" height="55"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundo-descricao.png" translatesAutoresizingMaskIntoConstraints="NO" id="r5g-K9-eJO">
-                                <rect key="frame" x="20" y="801" width="529" height="193"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXo-le-hFi">
-                                <rect key="frame" x="37" y="814" width="495" height="180"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWc-Uo-9UU">
-                                <rect key="frame" x="54" y="767" width="148" height="44"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="duk-ae-rW9"/>
-                    <connections>
-                        <outlet property="btnExercitar" destination="KIm-nW-7e3" id="m4v-LC-eGu"/>
-                        <outlet property="myTableView" destination="rpC-5F-fMZ" id="2Q8-Z2-t7E"/>
-                        <outlet property="txtDescricao" destination="NXo-le-hFi" id="zCu-iN-o6J"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gnt-AA-DJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2550" y="-1485"/>
-        </scene>
         <!--Sub View Conteudo Filho-->
         <scene sceneID="wGG-hT-Pmj">
             <objects>
@@ -629,58 +470,6 @@
             </objects>
             <point key="canvasLocation" x="-501" y="-1485"/>
         </scene>
-        <!--Sub View Conteudo-->
-        <scene sceneID="9wj-8y-ED1">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="sIv-jj-fJc" customClass="SubViewConteudo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lAa-yz-GEm"/>
-                        <viewControllerLayoutGuide type="bottom" id="qWw-cE-iFA"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TlP-2c-K5g">
-                        <rect key="frame" x="0.0" y="0.0" width="748" height="311"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="byk-aF-pSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2550" y="-2005"/>
-        </scene>
-        <!--controlador q tem a lista de exercicios-->
-        <scene sceneID="dzV-zg-u19">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tQW-Gq-m4D" customClass="ExercicioVIewContoller" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UmD-ev-9Sw"/>
-                        <viewControllerLayoutGuide type="bottom" id="xUr-Ao-Cuu"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KXY-22-dt8">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nAQ-RW-D80">
-                                <rect key="frame" x="0.0" y="66" width="768" height="958"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="K5d-UZ-TGY">
-                                        <rect key="frame" x="366" y="377" width="37" height="37"/>
-                                    </activityIndicatorView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="controlador q tem a lista de exercicios" id="JZK-R4-l7x"/>
-                    <connections>
-                        <outlet property="indicadorDeAtividade" destination="K5d-UZ-TGY" id="fYh-i6-yEz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5sD-gj-Hhq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3759" y="-1471"/>
-        </scene>
     </scenes>
     <resources>
         <image name="botao-enciclopedia.png" width="134" height="172"/>
@@ -690,12 +479,8 @@
         <image name="botao-treinamento.png" width="131" height="169"/>
         <image name="direitos.png" width="417" height="23"/>
         <image name="divisoria.png" width="769" height="20"/>
-        <image name="fundo-descricao.png" width="529" height="193"/>
         <image name="fundo-menu.png" width="769" height="1024"/>
-        <image name="icone-exercicio.png" width="100" height="100"/>
         <image name="icone-iniciar.png" width="300" height="304"/>
-        <image name="icone-teoria.png" width="100" height="100"/>
-        <image name="imagem-teoria.png" width="768" height="350"/>
         <image name="main_menu-animation.png" width="768" height="2050"/>
         <image name="preferencias.png" width="96" height="21"/>
         <image name="tedra-logo.png" width="477" height="93"/>

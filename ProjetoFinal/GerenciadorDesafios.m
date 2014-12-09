@@ -55,33 +55,33 @@ NSString* const FONT_MEDIUM = @"CooperHewitt-Medium";
     DesafioOperadores *d = [[DesafioOperadores alloc] initWithLevel:level andType:type andTasks:nTarefas];
     switch (meusDesafios.count+1) {
         case 1:
-            [d setTituloDesafio:@"Desafio 1"];
+            [d setTituloDesafio:@"Desafio Operador"];
             [d setDescricaoDesafio:@"Resolva 10 exercícios de operadores lógicos"];
             break;
         case 2:
-            [d setTituloDesafio:@"Desafio 2"];
+            [d setTituloDesafio:@"Desafio Operador"];
             [d setDescricaoDesafio:@"Resolva 10 exercícios de operadores relacionais"];
             break;
         case 3:
-            [d setTituloDesafio:@"Desafio 3"];
+            [d setTituloDesafio:@"Desafio Operador"];
             [d setDescricaoDesafio:@"Resolva 15 exercícios de operadores logicos"];
             break;
         case 4:
-            [d setTituloDesafio:@"Desafio 4"];
+            [d setTituloDesafio:@"Desafio Operador"];
             [d setDescricaoDesafio:@"Resolva 15 exercícios de operadores relacionais"];
             break;
         case 5:
-            [d setTituloDesafio:@"Desafio 5"];
+            [d setTituloDesafio:@"Desafio Operador"];
             [d setDescricaoDesafio:@"Resolva 10 exercícios de operadores logicos - DIFÍCIL"];
             break;
         case 6:
-            [d setTituloDesafio:@"Desafio 6"];
+            [d setTituloDesafio:@"Desafio Operador"];
             [d setDescricaoDesafio:@"Resolva 10 exercícios de operadores relacionais - DIFÍCIL"];
             break;
         
         default:
-            [d setTituloDesafio:@"Atribua um título"];
-            [d setDescricaoDesafio:@"Atribua uma descrição"];
+            [d setTituloDesafio:@"Desafio Operador"];
+            [d setDescricaoDesafio:@"Resolva 10 exercícios de operadores relacionais - DIFÍCIL"];
             break;
     }
     
