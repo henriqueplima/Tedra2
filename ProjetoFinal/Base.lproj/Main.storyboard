@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="-1550" y="-186"/>
         </scene>
-        <!--Lista De Exercicios View Controller-->
+        <!--Assuntos-->
         <scene sceneID="mNq-1y-Bc2">
             <objects>
-                <viewController id="BJX-3u-ZYr" customClass="ListaDeExerciciosViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListaAssuntos" id="BJX-3u-ZYr" customClass="ListaEnciclopediaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pXO-Zz-wOO"/>
                         <viewControllerLayoutGuide type="bottom" id="hIh-lH-cdK"/>
@@ -136,7 +136,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jek-JQ-8ox">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.19215686274509805" green="0.29411764705882354" blue="0.47843137254901963" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="200" id="MwA-qE-7FU" customClass="CustomizadaTableViewCell">
                                         <rect key="frame" x="0.0" y="86" width="768" height="200"/>
@@ -171,20 +171,20 @@
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnGo" destination="iFE-qf-yiU" id="Xp4-v9-dYL"/>
                                             <outlet property="descricao" destination="oT8-Sq-H7Q" id="U4B-5i-5Zj"/>
                                             <outlet property="titulo" destination="uzD-Q5-uEh" id="8e7-OB-fBT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="Laj-yx-eaG" id="oND-Ox-Hu5"/>
-                                    <outlet property="delegate" destination="Laj-yx-eaG" id="U7w-bT-qRb"/>
+                                    <outlet property="dataSource" destination="BJX-3u-ZYr" id="2sm-Ih-BaC"/>
+                                    <outlet property="delegate" destination="BJX-3u-ZYr" id="VDe-SX-Wn1"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="z1t-c4-tI7"/>
+                    <navigationItem key="navigationItem" title="Assuntos" id="z1t-c4-tI7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gX4-zq-1TR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -300,7 +300,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sH3-ai-SFe">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.19215686274509805" green="0.29411764705882354" blue="0.47843137254901963" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="200" id="00d-pL-g7a" customClass="CustomizadaTableViewCell">
                                         <rect key="frame" x="0.0" y="86" width="768" height="200"/>

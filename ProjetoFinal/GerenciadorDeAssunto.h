@@ -16,11 +16,12 @@
 
 @interface GerenciadorDeAssunto : NSObject
 {
-    NSMutableArray *titulosEDescricoesAssunto;
+    NSArray *titulosEDescricoesAssunto;
 }
 
 
--(NSMutableArray*)titulosEDescricoesAssunto;
-
+- (Assunto *)retornaAssuntoIndice:(int)index;
++ (GerenciadorDeAssunto *)sharedGerenciador;
+- (int)retornaQtdAssunto;
 
 @end

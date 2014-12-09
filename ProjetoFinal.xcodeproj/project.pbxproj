@@ -52,7 +52,6 @@
 		84110E5B1A30D27200DD5A27 /* jogo_variaveis-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 84110E5A1A30D27200DD5A27 /* jogo_variaveis-16.png */; };
 		8418F87C1970817000781F82 /* SpriteLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F8791970817000781F82 /* SpriteLabelNode.m */; };
 		8418F87D1970817000781F82 /* CenaExercicioVariavel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F87B1970817000781F82 /* CenaExercicioVariavel1.m */; };
-		8418F88119708B0900781F82 /* ExercicioVIewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F88019708B0900781F82 /* ExercicioVIewContoller.m */; };
 		8423FA3F199AC1BF00C447FF /* CenaExercicioVariavel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423FA3E199AC1BF00C447FF /* CenaExercicioVariavel2.m */; };
 		842D431719D611D7009FAC93 /* Validador.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D431619D611D7009FAC93 /* Validador.m */; };
 		8431DA6219CA12C50076EBBA /* modo livre-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 8431DA5E19CA12C50076EBBA /* modo livre-09.png */; };
@@ -79,7 +78,6 @@
 		84960B8019C8D9B900BC7808 /* SecaoMenuVariavel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84960B7F19C8D9B900BC7808 /* SecaoMenuVariavel.m */; };
 		849970E6199EA38700996580 /* CenaExercicio.m in Sources */ = {isa = PBXBuildFile; fileRef = 849970E5199EA38700996580 /* CenaExercicio.m */; };
 		84A72AAD19FEDE7B0009B58A /* IconeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A72AAC19FEDE7B0009B58A /* IconeView.m */; };
-		84B1B3E3197D881900089FCB /* CondicaoSimples.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B1B3E2197D881900089FCB /* CondicaoSimples.m */; };
 		84B1B3E6197D8AE500089FCB /* ExeCondSimples1.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B1B3E5197D8AE500089FCB /* ExeCondSimples1.m */; };
 		84B1B3E9197D8BEF00089FCB /* CenaExercicioCondSimples1.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B1B3E8197D8BEF00089FCB /* CenaExercicioCondSimples1.m */; };
 		84B237B319D352F3003EC749 /* MenuEditarBotao.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B237B119D352F3003EC749 /* MenuEditarBotao.png */; };
@@ -98,7 +96,6 @@
 		A500C2B519743C1D00D6BE83 /* ExeVariavel1.m in Sources */ = {isa = PBXBuildFile; fileRef = A500C2B419743C1D00D6BE83 /* ExeVariavel1.m */; };
 		A505740C197811E700F68932 /* ExeOperadores1.m in Sources */ = {isa = PBXBuildFile; fileRef = A505740B197811E700F68932 /* ExeOperadores1.m */; };
 		A505740F1978243A00F68932 /* Geral.m in Sources */ = {isa = PBXBuildFile; fileRef = A505740E1978243A00F68932 /* Geral.m */; };
-		A50B33401972BF2E00BDD473 /* ListaDeExerciciosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B333F1972BF2E00BDD473 /* ListaDeExerciciosViewController.m */; };
 		A513B45319D758C800303E19 /* CustomizadaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A513B45219D758C800303E19 /* CustomizadaTableViewCell.m */; };
 		A513B45619D760CD00303E19 /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A513B45519D760CD00303E19 /* CustomLabel.m */; };
 		A521FEE91993B87F00D28627 /* Gerador.m in Sources */ = {isa = PBXBuildFile; fileRef = A521FEE81993B87F00D28627 /* Gerador.m */; };
@@ -114,10 +111,6 @@
 		A52D87A219D782DA008079AF /* botao-go.png in Resources */ = {isa = PBXBuildFile; fileRef = A52D87A119D782DA008079AF /* botao-go.png */; };
 		A55F2B411964879A00111BEB /* Variavel.m in Sources */ = {isa = PBXBuildFile; fileRef = A55F2B401964879A00111BEB /* Variavel.m */; };
 		A55F2B4419648C0600111BEB /* ConceitosVariaveis.txt in Resources */ = {isa = PBXBuildFile; fileRef = A55F2B4319648C0600111BEB /* ConceitosVariaveis.txt */; };
-		A597F0F41960A7A6006429C7 /* SubViewConteudo.m in Sources */ = {isa = PBXBuildFile; fileRef = A597F0ED1960A7A6006429C7 /* SubViewConteudo.m */; };
-		A597F0F51960A7A6006429C7 /* SubViewConteudoFilho.m in Sources */ = {isa = PBXBuildFile; fileRef = A597F0EF1960A7A6006429C7 /* SubViewConteudoFilho.m */; };
-		A597F0F61960A7A6006429C7 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A597F0F11960A7A6006429C7 /* MenuViewController.m */; };
-		A597F0F71960A7A6006429C7 /* ConteudoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A597F0F31960A7A6006429C7 /* ConteudoViewController.m */; };
 		A5BE095F19C223AF00F7110E /* MenuPrincipalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BE095E19C223AF00F7110E /* MenuPrincipalViewController.m */; };
 		A5BE096919C5E87100F7110E /* ParteDaExpressao.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BE096819C5E87100F7110E /* ParteDaExpressao.m */; };
 		A5CBEB8C19D20CCC00AC879D /* Desafio-Operadores-Fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CBEB8B19D20CCC00AC879D /* Desafio-Operadores-Fundo.png */; };
@@ -397,8 +390,6 @@
 		8418F8791970817000781F82 /* SpriteLabelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLabelNode.m; sourceTree = "<group>"; };
 		8418F87A1970817000781F82 /* CenaExercicioVariavel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenaExercicioVariavel1.h; sourceTree = "<group>"; };
 		8418F87B1970817000781F82 /* CenaExercicioVariavel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenaExercicioVariavel1.m; sourceTree = "<group>"; };
-		8418F87F19708B0900781F82 /* ExercicioVIewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExercicioVIewContoller.h; sourceTree = "<group>"; };
-		8418F88019708B0900781F82 /* ExercicioVIewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExercicioVIewContoller.m; sourceTree = "<group>"; };
 		8423FA3D199AC1BF00C447FF /* CenaExercicioVariavel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenaExercicioVariavel2.h; sourceTree = "<group>"; };
 		8423FA3E199AC1BF00C447FF /* CenaExercicioVariavel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenaExercicioVariavel2.m; sourceTree = "<group>"; };
 		842D431519D611D7009FAC93 /* Validador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validador.h; sourceTree = "<group>"; };
@@ -438,8 +429,6 @@
 		849970E5199EA38700996580 /* CenaExercicio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CenaExercicio.m; path = ../CenaExercicio.m; sourceTree = "<group>"; };
 		84A72AAB19FEDE7B0009B58A /* IconeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconeView.h; sourceTree = "<group>"; };
 		84A72AAC19FEDE7B0009B58A /* IconeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconeView.m; sourceTree = "<group>"; };
-		84B1B3E1197D881900089FCB /* CondicaoSimples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CondicaoSimples.h; sourceTree = "<group>"; };
-		84B1B3E2197D881900089FCB /* CondicaoSimples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CondicaoSimples.m; sourceTree = "<group>"; };
 		84B1B3E4197D8AE500089FCB /* ExeCondSimples1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExeCondSimples1.h; path = Exercicios/ExeCondSimples1.h; sourceTree = "<group>"; };
 		84B1B3E5197D8AE500089FCB /* ExeCondSimples1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExeCondSimples1.m; path = Exercicios/ExeCondSimples1.m; sourceTree = "<group>"; };
 		84B1B3E7197D8BEF00089FCB /* CenaExercicioCondSimples1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CenaExercicioCondSimples1.h; path = Exercicios/CenaExercicioCondSimples1.h; sourceTree = "<group>"; };
@@ -471,8 +460,6 @@
 		A505740B197811E700F68932 /* ExeOperadores1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExeOperadores1.m; path = Exercicios/ExeOperadores1.m; sourceTree = "<group>"; };
 		A505740D1978243A00F68932 /* Geral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geral.h; sourceTree = "<group>"; };
 		A505740E1978243A00F68932 /* Geral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geral.m; sourceTree = "<group>"; };
-		A50B333E1972BF2E00BDD473 /* ListaDeExerciciosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaDeExerciciosViewController.h; sourceTree = "<group>"; };
-		A50B333F1972BF2E00BDD473 /* ListaDeExerciciosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaDeExerciciosViewController.m; sourceTree = "<group>"; };
 		A513B45119D758C800303E19 /* CustomizadaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizadaTableViewCell.h; sourceTree = "<group>"; };
 		A513B45219D758C800303E19 /* CustomizadaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizadaTableViewCell.m; sourceTree = "<group>"; };
 		A513B45419D760CD00303E19 /* CustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLabel.h; sourceTree = "<group>"; };
@@ -497,14 +484,6 @@
 		A55F2B3F1964879A00111BEB /* Variavel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variavel.h; sourceTree = "<group>"; };
 		A55F2B401964879A00111BEB /* Variavel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Variavel.m; sourceTree = "<group>"; };
 		A55F2B4319648C0600111BEB /* ConceitosVariaveis.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ConceitosVariaveis.txt; sourceTree = "<group>"; };
-		A597F0EC1960A7A6006429C7 /* SubViewConteudo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SubViewConteudo.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		A597F0ED1960A7A6006429C7 /* SubViewConteudo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SubViewConteudo.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		A597F0EE1960A7A6006429C7 /* SubViewConteudoFilho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SubViewConteudoFilho.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		A597F0EF1960A7A6006429C7 /* SubViewConteudoFilho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SubViewConteudoFilho.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		A597F0F01960A7A6006429C7 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		A597F0F11960A7A6006429C7 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		A597F0F21960A7A6006429C7 /* ConteudoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConteudoViewController.h; sourceTree = "<group>"; };
-		A597F0F31960A7A6006429C7 /* ConteudoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConteudoViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A5BE095D19C223AF00F7110E /* MenuPrincipalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPrincipalViewController.h; sourceTree = "<group>"; };
 		A5BE095E19C223AF00F7110E /* MenuPrincipalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuPrincipalViewController.m; sourceTree = "<group>"; };
 		A5BE096719C5E87100F7110E /* ParteDaExpressao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParteDaExpressao.h; path = Tools/Desafios/ParteDaExpressao.h; sourceTree = "<group>"; };
@@ -1031,22 +1010,6 @@
 			name = Desafio;
 			sourceTree = "<group>";
 		};
-		8487523319C3749500A93120 /* Conteudo */ = {
-			isa = PBXGroup;
-			children = (
-				8487523719C3755D00A93120 /* Exercicio */,
-				A597F0EE1960A7A6006429C7 /* SubViewConteudoFilho.h */,
-				A597F0EF1960A7A6006429C7 /* SubViewConteudoFilho.m */,
-				A597F0EC1960A7A6006429C7 /* SubViewConteudo.h */,
-				A597F0ED1960A7A6006429C7 /* SubViewConteudo.m */,
-				A597F0F01960A7A6006429C7 /* MenuViewController.h */,
-				A597F0F11960A7A6006429C7 /* MenuViewController.m */,
-				A597F0F21960A7A6006429C7 /* ConteudoViewController.h */,
-				A597F0F31960A7A6006429C7 /* ConteudoViewController.m */,
-			);
-			name = Conteudo;
-			sourceTree = "<group>";
-		};
 		8487523419C374DE00A93120 /* Enciclopedia */ = {
 			isa = PBXGroup;
 			children = (
@@ -1065,17 +1028,6 @@
 				1551BFE919C36C8600CBDB86 /* LivreViewController.m */,
 			);
 			name = Livre;
-			sourceTree = "<group>";
-		};
-		8487523719C3755D00A93120 /* Exercicio */ = {
-			isa = PBXGroup;
-			children = (
-				8418F87F19708B0900781F82 /* ExercicioVIewContoller.h */,
-				8418F88019708B0900781F82 /* ExercicioVIewContoller.m */,
-				A50B333E1972BF2E00BDD473 /* ListaDeExerciciosViewController.h */,
-				A50B333F1972BF2E00BDD473 /* ListaDeExerciciosViewController.m */,
-			);
-			name = Exercicio;
 			sourceTree = "<group>";
 		};
 		8487523819C3784000A93120 /* Desafio */ = {
@@ -1227,8 +1179,6 @@
 			children = (
 				91A9861C1962392400EA1074 /* GerenciadorDeAssunto.h */,
 				91A9861D1962392400EA1074 /* GerenciadorDeAssunto.m */,
-				84B1B3E1197D881900089FCB /* CondicaoSimples.h */,
-				84B1B3E2197D881900089FCB /* CondicaoSimples.m */,
 				91A9860F1962324500EA1074 /* Assunto.h */,
 				91A986101962324500EA1074 /* Assunto.m */,
 				A55F2B3F1964879A00111BEB /* Variavel.h */,
@@ -1339,7 +1289,6 @@
 				A5BE095E19C223AF00F7110E /* MenuPrincipalViewController.m */,
 				BDD22EF319A6F2390043AA02 /* Introducao */,
 				8487523219C3747500A93120 /* Desafio */,
-				8487523319C3749500A93120 /* Conteudo */,
 				8487523419C374DE00A93120 /* Enciclopedia */,
 				8487523619C3751F00A93120 /* Livre */,
 				12719D4D19CB6CCD006B1374 /* TempViewController.h */,
@@ -2083,13 +2032,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8418F88119708B0900781F82 /* ExercicioVIewContoller.m in Sources */,
 				A513B45619D760CD00303E19 /* CustomLabel.m in Sources */,
 				12428D4519C9FC240012B2B6 /* GerenciadorDesafios.m in Sources */,
 				8446A4D51994027500C92785 /* LivreVariavel.m in Sources */,
 				8418F87D1970817000781F82 /* CenaExercicioVariavel1.m in Sources */,
 				BD4B4BDB197075BD00D6E839 /* SpriteCaixaNode.m in Sources */,
-				A597F0F71960A7A6006429C7 /* ConteudoViewController.m in Sources */,
 				1551BFEA19C36C8600CBDB86 /* LivreViewController.m in Sources */,
 				A529DF201965DB8A00A3D9FB /* Calculador.m in Sources */,
 				A5BE096919C5E87100F7110E /* ParteDaExpressao.m in Sources */,
@@ -2117,7 +2064,6 @@
 				BD6B54CB19D7985800BC0E5F /* DesafioVariavelScene.m in Sources */,
 				84960B7A19C8B40000BC7808 /* IconeSecao.m in Sources */,
 				BD98DE8F1A1BD4CB00845D6B /* EstatisticaViewController.m in Sources */,
-				A597F0F61960A7A6006429C7 /* MenuViewController.m in Sources */,
 				BDBE7693197A39E0004EA926 /* OperadorNode.m in Sources */,
 				BD6B54D719D7987300BC0E5F /* SpriteVisorNode.m in Sources */,
 				8423FA3F199AC1BF00C447FF /* CenaExercicioVariavel2.m in Sources */,
@@ -2135,7 +2081,6 @@
 				1551BFE719C36C3C00CBDB86 /* DesafioViewController.m in Sources */,
 				12719D4319CB5683006B1374 /* DesafiosOperadoresScene.m in Sources */,
 				A513B45319D758C800303E19 /* CustomizadaTableViewCell.m in Sources */,
-				A597F0F41960A7A6006429C7 /* SubViewConteudo.m in Sources */,
 				12719D4F19CB6CCD006B1374 /* TempViewController.m in Sources */,
 				84960B8019C8D9B900BC7808 /* SecaoMenuVariavel.m in Sources */,
 				91A9861E1962392400EA1074 /* GerenciadorDeAssunto.m in Sources */,
@@ -2149,15 +2094,12 @@
 				BDD22EF919A6F31C0043AA02 /* FilhoViewController.m in Sources */,
 				BDB893D719677B3A009C105C /* AnimaVariavel.m in Sources */,
 				A505740C197811E700F68932 /* ExeOperadores1.m in Sources */,
-				A597F0F51960A7A6006429C7 /* SubViewConteudoFilho.m in Sources */,
 				84A72AAD19FEDE7B0009B58A /* IconeView.m in Sources */,
 				BDBE7694197A39E0004EA926 /* OperadorResultadoNode.m in Sources */,
 				A529DF1C1965DB7500A3D9FB /* Aritimetico.m in Sources */,
 				BD6B54CA19D7985800BC0E5F /* DesafioVariavel.m in Sources */,
 				8446A4CF1994021800C92785 /* ExeVariavel2.m in Sources */,
 				BD98DE8A1A1BD4AF00845D6B /* NSMutableArray+pieEx.m in Sources */,
-				84B1B3E3197D881900089FCB /* CondicaoSimples.m in Sources */,
-				A50B33401972BF2E00BDD473 /* ListaDeExerciciosViewController.m in Sources */,
 				A5F38EFD19C711C900D337A4 /* DesafioOperadores.m in Sources */,
 				BD98DE8C1A1BD4AF00845D6B /* PieLayer.m in Sources */,
 				BD6B54D519D7987300BC0E5F /* SpriteCronometroNode.m in Sources */,

@@ -11,7 +11,7 @@
 #import "CustomLabel.h"
 #import "GerenciadorDeAssunto.h"
 
-@interface ListaEnciclopediaViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ListaEnciclopediaViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
     GerenciadorDeAssunto *gerenciador;
     NSMutableArray* titulosDescricoes;

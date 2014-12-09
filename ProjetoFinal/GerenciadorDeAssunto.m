@@ -9,7 +9,6 @@
 #import "GerenciadorDeAssunto.h"
 #import "Variavel.h"
 #import "Operadores.h"
-#import "CondicaoSimples.h"
 
 //NSString* const FONT_THIN = @"Colaborate-Thin";
 //NSString* const FONT_REGULAR = @"Colaborate-Regular";
@@ -20,12 +19,35 @@
     self = [super init];
     
     if(self){
-        titulosEDescricoesAssunto = [[NSMutableArray alloc] init];
+        titulosEDescricoesAssunto = [NSArray arrayWithObjects:[[Variavel alloc] initWithTitulo:@"Variável" descricao:@"Conteudo de Variável"],[[Operadores alloc] initWithTitulo:@"Operadores" descricao:@"Conteudo de Operadores"],nil];
         
         
     }
     
     return self;
+}
+
++ (GerenciadorDeAssunto *)sharedGerenciador{
+    static GerenciadorDeAssunto *sharedGerenciador;
+    if (!sharedGerenciador) {
+        sharedGerenciador = [[super allocWithZone:nil] init];
+    }
+    return sharedGerenciador;
+}
+
++ (id)allocWithZone:(struct _NSZone *)zone{
+    return [self sharedGerenciador];
+}
+
+- (Assunto *)retornaAssuntoIndice:(int)index{
+    
+    return [titulosEDescricoesAssunto objectAtIndex:index];
+    
+}
+
+- (int)retornaQtdAssunto{
+    
+    return titulosEDescricoesAssunto.count;
 }
 
 

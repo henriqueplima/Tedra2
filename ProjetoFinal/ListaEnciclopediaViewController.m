@@ -30,8 +30,7 @@
 	// Do any additional setup after loading the view.
     
     gerenciador = [GerenciadorDeAssunto sharedGerenciador];
-    
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:234.0/255.0 green:175.0/255.0 blue:59.0/255.0 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:180.0/255.0 green:77.0/255.0 blue:84.0/255.0 alpha:1.0];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -48,7 +47,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    titulosDescricoes = [gerenciador retornaTitulosEDescricoesAssunto];
+    //titulosDescricoes = [gerenciador retornaTitulosEDescricoesAssunto];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,8 +65,10 @@
     
     CustomizadaTableViewCell *cell = (CustomizadaTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    cell.titulo.text = [[titulosDescricoes objectAtIndex:indexPath.row]valueForKey:@"titulo"];
-    cell.descricao.text = [[titulosDescricoes objectAtIndex:indexPath.row]valueForKey:@"descricao"];
+    Assunto *novoAssunto = [gerenciador retornaAssuntoIndice:indexPath.row];
+    
+    cell.titulo.text = [novoAssunto titulo];
+    cell.descricao.text = [novoAssunto descricao];
     [cell mudaCorDeFundo:(int)indexPath.row];
     //tableView.separatorColor = [cell cor];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -76,7 +77,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [titulosDescricoes count];
+    return [gerenciador retornaQtdAssunto];
 }
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -85,7 +86,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [gerenciador selecionaDesafio:(int)indexPath.row];
+    //[gerenciador selecionaDesafio:(int)indexPath.row];
     CustomizadaTableViewCell *cell = (CustomizadaTableViewCell*) [tableView cellForRowAtIndexPath:indexPath] ;
     [cell.btnGo setHidden:NO];
     
