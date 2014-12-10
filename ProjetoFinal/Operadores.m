@@ -24,6 +24,9 @@
 
 -(void)prepararAssunto{
     
+    self.imagemConteudo = [UIImage imageNamed:@"conteudoOperadores.png"];
+    
+    
 }
 
 @end

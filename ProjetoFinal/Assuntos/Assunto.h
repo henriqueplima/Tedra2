@@ -18,6 +18,7 @@
 
 @property NSString *titulo, *descricao, *conteudo;
 @property NSArray *imagens, *exercicios;
+@property UIImage *imagemConteudo;
 
 -(id)initWithTitulo:(NSString*)titulo descricao:(NSString*)descricao;
 -(void)prepararAssunto;

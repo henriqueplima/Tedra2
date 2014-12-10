@@ -163,6 +163,9 @@
                                                     <state key="normal" image="botao-go.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="PB1-un-bWx" kind="push" id="60U-Ez-vo4"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="divisoria.png" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-SY-FUa">
                                                     <rect key="frame" x="0.0" y="180" width="768" height="20"/>
@@ -189,6 +192,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gX4-zq-1TR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="464" y="-2568"/>
+        </scene>
+        <!--Enciclopedia View Controller-->
+        <scene sceneID="0aN-qN-NvY">
+            <objects>
+                <viewController id="PB1-un-bWx" customClass="EnciclopediaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mem-UX-yr0"/>
+                        <viewControllerLayoutGuide type="bottom" id="SwT-Rf-LYc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hpf-8t-Lah">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1l8-Vj-I8c">
+                                <rect key="frame" x="0.0" y="64" width="768" height="1024"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r52-9E-NdC"/>
+                    <connections>
+                        <outlet property="scrollConteudo" destination="1l8-Vj-I8c" id="z0d-HC-dlK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKL-xk-RJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-2591"/>
         </scene>
         <!--Enciclopédia-->
         <scene sceneID="237-fs-HyQ">

@@ -50,5 +50,24 @@
     return titulosEDescricoesAssunto.count;
 }
 
+- (void)instanciarConteudo{
+    
+    
+    [assuntoSelecinado prepararAssunto];
+    
+    
+    
+}
+
+- (void)assuntoSelecionado:(int)index{
+    
+    assuntoSelecinado = [titulosEDescricoesAssunto objectAtIndex:index];
+    
+}
+
+- (UIImage *)retornaConteudo{
+    return [assuntoSelecinado imagemConteudo];
+}
+
 
 @end

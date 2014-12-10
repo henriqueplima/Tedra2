@@ -7,6 +7,7 @@
 //
 
 #import "EnciclopediaViewController.h"
+#import "GerenciadorDeAssunto.h"
 
 @interface EnciclopediaViewController ()
 
@@ -26,6 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    GerenciadorDeAssunto *gerenciador = [GerenciadorDeAssunto sharedGerenciador];
+    UIImage *imagemConteudo = [gerenciador retornaConteudo];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:imagemConteudo];
+    self.scrollConteudo.contentSize = imagemConteudo.size;
+    [self.scrollConteudo addSubview:imageView];
 	// Do any additional setup after loading the view.
 }
 

@@ -49,6 +49,8 @@
 		1551BFE719C36C3C00CBDB86 /* DesafioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551BFE619C36C3C00CBDB86 /* DesafioViewController.m */; };
 		1551BFEA19C36C8600CBDB86 /* LivreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551BFE919C36C8600CBDB86 /* LivreViewController.m */; };
 		1551BFED19C36F4B00CBDB86 /* ListaEnciclopediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1551BFEC19C36F4B00CBDB86 /* ListaEnciclopediaViewController.m */; };
+		6E9350931A38B06E009F816E /* conteudoOperadores.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9350911A38B06E009F816E /* conteudoOperadores.png */; };
+		6E9350941A38B06E009F816E /* conteudoVariaveis.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E9350921A38B06E009F816E /* conteudoVariaveis.png */; };
 		84110E5B1A30D27200DD5A27 /* jogo_variaveis-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 84110E5A1A30D27200DD5A27 /* jogo_variaveis-16.png */; };
 		8418F87C1970817000781F82 /* SpriteLabelNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F8791970817000781F82 /* SpriteLabelNode.m */; };
 		8418F87D1970817000781F82 /* CenaExercicioVariavel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8418F87B1970817000781F82 /* CenaExercicioVariavel1.m */; };
@@ -224,7 +226,6 @@
 		BD9CD6B91A2014A50013B7B8 /* JCRBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9CD6B81A2014A50013B7B8 /* JCRBlurView.m */; };
 		BD9DF26E19A171A2003938C9 /* item-Condicionais.png in Resources */ = {isa = PBXBuildFile; fileRef = BD9DF26B19A171A2003938C9 /* item-Condicionais.png */; };
 		BD9DF26F19A171A2003938C9 /* item-Operadores.png in Resources */ = {isa = PBXBuildFile; fileRef = BD9DF26C19A171A2003938C9 /* item-Operadores.png */; };
-		BD9DF27019A171A2003938C9 /* item-Variáveis.png in Resources */ = {isa = PBXBuildFile; fileRef = BD9DF26D19A171A2003938C9 /* item-Variáveis.png */; };
 		BDA68F3D199819C400BD0527 /* valores-errado.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA68F3C199819C400BD0527 /* valores-errado.png */; };
 		BDB4810B196CB7FC00D5901A /* Operadores.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB4810A196CB7FC00D5901A /* Operadores.m */; };
 		BDB48111196CB89400D5901A /* AnimaOperadores.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB48110196CB89400D5901A /* AnimaOperadores.m */; };
@@ -385,6 +386,8 @@
 		1551BFE919C36C8600CBDB86 /* LivreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivreViewController.m; sourceTree = "<group>"; };
 		1551BFEB19C36F4B00CBDB86 /* ListaEnciclopediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaEnciclopediaViewController.h; sourceTree = "<group>"; };
 		1551BFEC19C36F4B00CBDB86 /* ListaEnciclopediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaEnciclopediaViewController.m; sourceTree = "<group>"; };
+		6E9350911A38B06E009F816E /* conteudoOperadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = conteudoOperadores.png; path = Imagens/conteudoOperadores.png; sourceTree = "<group>"; };
+		6E9350921A38B06E009F816E /* conteudoVariaveis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = conteudoVariaveis.png; path = Imagens/conteudoVariaveis.png; sourceTree = "<group>"; };
 		84110E5A1A30D27200DD5A27 /* jogo_variaveis-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jogo_variaveis-16.png"; path = "Imagens/Desafios/jogo_variaveis-16.png"; sourceTree = "<group>"; };
 		8418F8781970817000781F82 /* SpriteLabelNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteLabelNode.h; sourceTree = "<group>"; };
 		8418F8791970817000781F82 /* SpriteLabelNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteLabelNode.m; sourceTree = "<group>"; };
@@ -621,7 +624,6 @@
 		BD9CD6B81A2014A50013B7B8 /* JCRBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JCRBlurView.m; path = Estatisticas/JCRBlurView.m; sourceTree = "<group>"; };
 		BD9DF26B19A171A2003938C9 /* item-Condicionais.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "item-Condicionais.png"; path = "Imagens/item-Condicionais.png"; sourceTree = "<group>"; };
 		BD9DF26C19A171A2003938C9 /* item-Operadores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "item-Operadores.png"; path = "Imagens/item-Operadores.png"; sourceTree = "<group>"; };
-		BD9DF26D19A171A2003938C9 /* item-Variáveis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "item-Variáveis.png"; path = "Imagens/item-Variáveis.png"; sourceTree = "<group>"; };
 		BDA68F3C199819C400BD0527 /* valores-errado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "valores-errado.png"; path = "Imagens/Sprites/Condicionais/valores-errado.png"; sourceTree = "<group>"; };
 		BDB48109196CB7FC00D5901A /* Operadores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operadores.h; sourceTree = "<group>"; };
 		BDB4810A196CB7FC00D5901A /* Operadores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operadores.m; sourceTree = "<group>"; };
@@ -907,6 +909,15 @@
 				12C02BD519D612180015AF10 /* preferencias.png */,
 			);
 			name = "Menu Principal";
+			sourceTree = "<group>";
+		};
+		6E9350901A38B054009F816E /* Enciclopedia */ = {
+			isa = PBXGroup;
+			children = (
+				6E9350911A38B06E009F816E /* conteudoOperadores.png */,
+				6E9350921A38B06E009F816E /* conteudoVariaveis.png */,
+			);
+			name = Enciclopedia;
 			sourceTree = "<group>";
 		};
 		8418F87E1970895500781F82 /* Variaveis */ = {
@@ -1667,6 +1678,7 @@
 		E501FA69192FCD1600B56B5C /* Imagens */ = {
 			isa = PBXGroup;
 			children = (
+				6E9350901A38B054009F816E /* Enciclopedia */,
 				12C02BC019D60AFB0015AF10 /* Menu Principal */,
 				A5CBEB8919D1F6A700AC879D /* Desafios */,
 				8492087E19C7756400D64AE8 /* menuIcon.png */,
@@ -1674,7 +1686,6 @@
 				BDD22F0619A6F4A70043AA02 /* Tutorial */,
 				BD9DF26B19A171A2003938C9 /* item-Condicionais.png */,
 				BD9DF26C19A171A2003938C9 /* item-Operadores.png */,
-				BD9DF26D19A171A2003938C9 /* item-Variáveis.png */,
 				BDEE047119A06C9900EAC8ED /* check.png */,
 				BDEE046F19A0224D00EAC8ED /* fundo-descricao.png */,
 				BDEE046D19A0162000EAC8ED /* icone-iniciar.png */,
@@ -1868,6 +1879,7 @@
 				12C02BD219D60F290015AF10 /* botao-enciclopedia.png in Resources */,
 				BDEE046A199FEC7E00EAC8ED /* icone-teoria.png in Resources */,
 				BDEE046C19A00BF000EAC8ED /* icone-exercicio.png in Resources */,
+				6E9350931A38B06E009F816E /* conteudoOperadores.png in Resources */,
 				BD447AFA19D9F84F00AF6E15 /* main_menu-animation.png in Resources */,
 				BD447AED19D9D84600AF6E15 /* animation_red_box-7.png in Resources */,
 				BDEE046E19A0162000EAC8ED /* icone-iniciar.png in Resources */,
@@ -1887,7 +1899,6 @@
 				BD6B555419D7D29400BC0E5F /* animation_wrong-1.png in Resources */,
 				BD447AF019D9D84600AF6E15 /* animation_yellow_box-1.png in Resources */,
 				BD6B552E19D7D26600BC0E5F /* cronometro.png in Resources */,
-				BD9DF27019A171A2003938C9 /* item-Variáveis.png in Resources */,
 				BD6B555A19D7D29400BC0E5F /* animation_wrong-6.png in Resources */,
 				BD447AF619D9D84600AF6E15 /* animation_yellow_box-7.png in Resources */,
 				8431DA6419CA12C50076EBBA /* modo livre-11.png in Resources */,
@@ -1910,6 +1921,7 @@
 				A5CBEBA219D4B0EE00AC879D /* Desafio-Andamento-Vazio.png in Resources */,
 				BD511002198A142E0052B6E5 /* parte-resultado.png in Resources */,
 				8431DA7119CA28FD0076EBBA /* livre-laco.png in Resources */,
+				6E9350941A38B06E009F816E /* conteudoVariaveis.png in Resources */,
 				BDC40744199B1E18006CD7AE /* sprite-introducao7.png in Resources */,
 				BDF8AE0A197B258C00BA5B8A /* parte-valores10.png in Resources */,
 				BDF8AE03197B258C00BA5B8A /* parte-valores3.png in Resources */,

@@ -86,7 +86,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //[gerenciador selecionaDesafio:(int)indexPath.row];
+    [gerenciador assuntoSelecionado:indexPath.row];
     CustomizadaTableViewCell *cell = (CustomizadaTableViewCell*) [tableView cellForRowAtIndexPath:indexPath] ;
     [cell.btnGo setHidden:NO];
     

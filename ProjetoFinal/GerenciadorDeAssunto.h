@@ -17,11 +17,15 @@
 @interface GerenciadorDeAssunto : NSObject
 {
     NSArray *titulosEDescricoesAssunto;
+    Assunto *assuntoSelecinado;
 }
 
 
 - (Assunto *)retornaAssuntoIndice:(int)index;
 + (GerenciadorDeAssunto *)sharedGerenciador;
 - (int)retornaQtdAssunto;
+- (void)instanciarConteudo;
+- (void)assuntoSelecionado:(int)index;
+- (UIImage *)retornaConteudo;
 
 @end

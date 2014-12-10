@@ -8,6 +8,7 @@
 
 #import "CustomizadaTableViewCell.h"
 #import "GerenciadorDesafios.h"
+#import "GerenciadorDeAssunto.h"
 @implementation CustomizadaTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -40,6 +41,12 @@
 - (IBAction)acaoBtnGo:(id)sender {
     GerenciadorDesafios *gerenciador = [GerenciadorDesafios sharedGerenciador];
     [gerenciador instanciaTarefas];
+    
+}
+
+- (IBAction)acaoBtnGoAssunto:(id)sender {
+    GerenciadorDeAssunto *gerenciador = [GerenciadorDeAssunto sharedGerenciador];
+    [gerenciador instanciarConteudo];
     
 }
 

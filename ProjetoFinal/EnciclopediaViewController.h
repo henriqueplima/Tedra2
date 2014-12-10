@@ -10,4 +10,6 @@
 
 @interface EnciclopediaViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollConteudo;
+
 @end
