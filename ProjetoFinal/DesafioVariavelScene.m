@@ -94,9 +94,9 @@
     
     //CASO A ESTEIRA TENHA SE LEVANTADO, SIGNIFICA QUE O DESAFIO COMEÇOU
     if(resultado){
-        [nodeEsteira habilitarToqueNasCaixas:YES];
         [nodeVisor gerarValorAleatorioEntreOsTipos:tipos];
         [nodeCronometro iniciarContagem];
+        [nodeEsteira performSelector:@selector(habilitarToqueNasCaixas:) withObject:[NSNumber numberWithBool:YES] afterDelay:0.05];
         
     }else{
         [nodeEsteira iniciarAnimacaoFimDaRodada];
@@ -107,7 +107,7 @@
 
 -(void)caixaFoiClicada{
     [nodeCronometro pararContagem];
-    [nodeEsteira habilitarToqueNasCaixas:NO];
+    [nodeEsteira habilitarToqueNasCaixas:[NSNumber numberWithBool:NO]];
 }
 
 //QUANDO O USUÁRIO RESPONDE O DESAFIO, QUEM CRIOU ESTE PROTOCÓLO IRÁ CHAMAR ESTE MÉTODO, QUE POR SUA VEZ MANDA PARAR O CRONÔMETRO E VERIFICA A RESPOSTA

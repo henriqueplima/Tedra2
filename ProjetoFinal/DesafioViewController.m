@@ -31,6 +31,15 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
+    
+    
+   
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
     gerenciadorDesafios = [GerenciadorDesafios sharedGerenciador];
     gerador = [[Gerador alloc]init];
     
@@ -41,7 +50,7 @@
     [cenaAtual setMyDelegate:self];
     [viewDesafioAtual presentScene: cenaAtual];
     [[viewDesafioAtual scene]setSize:viewDesafioAtual.frame.size];
-    
+
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 7.5, 100, 50)];
     //[btn setBackgroundColor:[UIColor blueColor]];
     [btn setImage:[UIImage imageNamed:@"jogo_variaveis-16.png"] forState:UIControlStateNormal];
@@ -74,12 +83,6 @@
     [super viewWillDisappear:animated];
     
 }
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    
-}
-
 
 - (void)didReceiveMemoryWarning
 {

@@ -36,7 +36,7 @@
 -(void)iniciarAnimacaoFimDaRodada;
 -(void)iniciarAnimacaoMoverEsteira;
 -(void)posicionarCaixasParaDesafio;
--(void)habilitarToqueNasCaixas:(BOOL)resultado;
+-(void)habilitarToqueNasCaixas:(NSNumber*)resposta;
 -(void)modificarTipoDasCaixas;
 -(void)iniciarAnimacaoDeEntrada;
 -(void)resetarValores;

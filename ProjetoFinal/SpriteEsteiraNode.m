@@ -246,7 +246,8 @@
 
 
 //MÉTODO RESPONSÁVEL POR HABILITAR OU DESABILITAR A INTERAÇÃO COM AS CAIXAS
--(void)habilitarToqueNasCaixas:(BOOL)resultado{
+-(void)habilitarToqueNasCaixas:(NSNumber*)resposta{
+    BOOL resultado = [resposta boolValue];
     for (SpriteCaixinhaNode *c in vtCaixas) {
         [c setUserInteractionEnabled:resultado];
     }

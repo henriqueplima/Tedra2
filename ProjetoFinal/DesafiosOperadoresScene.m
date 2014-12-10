@@ -21,12 +21,14 @@
 -(id)initWithSize:(CGSize)size{
     
     if (self = [super initWithSize:size]) {
+        [self setUserInteractionEnabled:NO];
         gerenciadorDesafios = [GerenciadorDesafios sharedGerenciador];
         gerador = [[Gerador alloc] init];
         desafioAtual = [[DesafioOperadores alloc] init];
         desafioAtual = [gerenciadorDesafios retornaTarefasParaDesafio];
         nodeProgresso = [[ProgressoDesafioBar alloc] initWithBolinhas:[desafioAtual nTarefas]];
         //nodeProgresso = [[nodeProgressoDesafioBar alloc] initWithBolinhas:3];
+
         
         
         fundo = [[SKSpriteNode alloc] initWithImageNamed:@"Desafio-Operadores-Fundo.png"];
@@ -60,15 +62,19 @@
     
 }
 
+
+-(void)habilitarToqueNosBotoes{
+    [self setUserInteractionEnabled:YES];
+}
+
 -(void)animacaoDeEntradaCronometroFinalizada{
     
     [nodeCronometro iniciarContagem];
-    
+    [self performSelector:@selector(habilitarToqueNosBotoes) withObject:nil afterDelay:0.05];
 }
 
 - (void)tempoEsgotado{
     NSLog(@"tempo esgotado");
-    
     
     
     [self insereResposta:NO];
@@ -182,6 +188,7 @@
     [operador runAction:temp completion:^{
         [operador runAction:[operador acaoReversa] completion:^{
             [nodeCronometro iniciarContagem];
+            [self performSelector:@selector(habilitarToqueNosBotoes) withObject:nil afterDelay:0.05];
             [self alteraTarefa];
         }];
         
@@ -263,6 +270,7 @@
             BotaoDesafiosNode *temp = (BotaoDesafiosNode*)conteudoAtivo ;
             [nodeCronometro pararContagem];
             [self corrige:[temp text]];
+            [self setUserInteractionEnabled:NO];
             
         }else if ([@"restart"isEqualToString:conteudoAtivo.name]){
             [desafioAtual restart];
