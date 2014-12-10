@@ -30,8 +30,10 @@
     GerenciadorDeAssunto *gerenciador = [GerenciadorDeAssunto sharedGerenciador];
     UIImage *imagemConteudo = [gerenciador retornaConteudo];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:imagemConteudo];
-    self.scrollConteudo.contentSize = imagemConteudo.size;
+    float a = imagemConteudo.size.height;
+    self.scrollConteudo.contentSize = CGSizeMake(self.scrollConteudo.frame.size.width, a);
     [self.scrollConteudo addSubview:imageView];
+    
 	// Do any additional setup after loading the view.
 }
 

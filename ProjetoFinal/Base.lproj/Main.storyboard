@@ -164,6 +164,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="acaoBtnGoAssunto:" destination="MwA-qE-7FU" eventType="touchUpInside" id="hZD-gC-sRA"/>
                                                         <segue destination="PB1-un-bWx" kind="push" id="60U-Ez-vo4"/>
                                                     </connections>
                                                 </button>
@@ -206,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1l8-Vj-I8c">
-                                <rect key="frame" x="0.0" y="64" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1088"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

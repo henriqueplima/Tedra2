@@ -27,5 +27,5 @@
 - (void)instanciarConteudo;
 - (void)assuntoSelecionado:(int)index;
 - (UIImage *)retornaConteudo;
-
+- (NSString *)retornaTituloAssunto;
 @end

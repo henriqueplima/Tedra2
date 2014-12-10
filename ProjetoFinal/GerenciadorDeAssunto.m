@@ -69,5 +69,9 @@
     return [assuntoSelecinado imagemConteudo];
 }
 
+- (NSString *)retornaTituloAssunto{
+    return assuntoSelecinado.titulo;
+}
+
 
 @end

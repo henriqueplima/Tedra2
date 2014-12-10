@@ -28,6 +28,8 @@
 
 -(void)prepararAssunto{
     
+    NSLog(@"chamou");
+    
 }
 
 @end

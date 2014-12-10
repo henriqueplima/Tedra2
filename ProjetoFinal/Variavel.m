@@ -26,7 +26,7 @@
     
     // INSTANCIA AS PROPRIEDADES QUE SERÃO USADAS PARA EXIBIR O ASSUNTO
     self.imagemConteudo = [UIImage imageNamed:@"conteudoVariaveis.png"];
-    
+    NSLog(@"fff");
 }
 
 
