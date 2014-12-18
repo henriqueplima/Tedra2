@@ -21,7 +21,7 @@
     if(self){
         titulosEDescricoesAssunto = [NSArray arrayWithObjects:[[Variavel alloc] initWithTitulo:@"Variável" descricao:@"Conteudo de Variável"],[[Operadores alloc] initWithTitulo:@"Operadores" descricao:@"Conteudo de Operadores"],nil];
         
-        
+        NSLog(@"so para comitar");
     }
     
     return self;
